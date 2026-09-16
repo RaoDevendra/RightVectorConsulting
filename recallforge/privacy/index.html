@@ -1,92 +1,571 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>-</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 
-    <title>RecallForge Privacy Policy</title>
+<style>
+body{margin:0;color:#1f2937;background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7}
+body>header,body>main,body>footer,body>h1,body>h2,body>p,body>ul,body>ol,body>blockquote{max-width:920px;margin-left:auto;margin-right:auto}
+body{padding:42px max(20px,calc((100% - 920px)/2))}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;letter-spacing:-.025em;margin:0 0 22px}
+h2{font-size:1.45rem;line-height:1.3;margin:42px 0 12px;padding-top:8px}
+p{margin:0 0 16px} ul,ol{padding-left:28px;margin-top:8px;margin-bottom:20px} li{margin:6px 0}
+a{color:#175cd3} strong{font-weight:650} hr{border:0;border-top:1px solid #e5e7eb;margin:40px 0}
+@media(max-width:600px){body{padding:28px 18px}h2{margin-top:34px}}
+</style>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 30px;
-            color: #222;
-            line-height: 1.7;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 35px;
-        }
-
-        .updated {
-            color: #666;
-            margin-bottom: 40px;
-        }
-    </style>
 </head>
-
 <body>
-
-    <h1>RecallForge Privacy Policy</h1>
-
-    <p class="updated">Last Updated: September 16, 2026</p>
-
-    <p>
-        This Privacy Policy describes how RecallForge handles information
-        when you use the RecallForge application.
-    </p>
-
-    <h2>Information We Collect</h2>
-
-    <p>
-        [Describe what information RecallForge collects.]
-    </p>
-
-    <h2>How We Use Information</h2>
-
-    <p>
-        [Describe how information is used.]
-    </p>
-
-    <h2>Data Storage and Security</h2>
-
-    <p>
-        [Describe where data is stored and how it is protected.]
-    </p>
-
-    <h2>Third-Party Services</h2>
-
-    <p>
-        [Identify any third-party services used by RecallForge.]
-    </p>
-
-    <h2>Data Retention and Deletion</h2>
-
-    <p>
-        [Describe retention and deletion practices.]
-    </p>
-
-    <h2>Changes to This Privacy Policy</h2>
-
-    <p>
-        This Privacy Policy may be updated periodically. Changes will be
-        posted on this page with an updated effective date.
-    </p>
-
-    <h2>Contact</h2>
-
-    <p>
-        For questions regarding this Privacy Policy, contact:<br>
-        RightVector Consulting
-    </p>
-
+<h1 id="recallforge-cert-study-privacy-policy">RecallForge: Cert Study —
+Privacy Policy</h1>
+<p><strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Last Updated:</strong> September 16, 2026</p>
+<p>RecallForge: Cert Study (“RecallForge” or the “App”) is provided by
+RightVector Consulting (“RightVector,” “we,” “us,” or “our”).</p>
+<p>RecallForge is designed with a privacy-minimizing architecture. The
+App does not require a user account, and its primary study data is
+designed to remain on the user’s device. RightVector does not sell user
+information, use study content for advertising, or operate a cloud
+repository of users’ RecallForge study databases.</p>
+<p>Certain optional features, including AI-powered flashcard generation,
+require information selected by the user to be transmitted to
+third-party services as described below.</p>
+<h2 id="information-recallforge-does-not-require">1. Information
+RecallForge Does Not Require</h2>
+<p>RecallForge does not require users to provide RightVector with a
+name, email address, telephone number, mailing address, or other account
+information in order to use the App.</p>
+<p>RecallForge is not designed to:</p>
+<ul>
+<li>sell or rent personal information;</li>
+<li>serve third-party advertising;</li>
+<li>create advertising profiles;</li>
+<li>track users across unrelated apps or websites;</li>
+<li>maintain a centralized cloud account containing a user’s study
+database; or</li>
+<li>use a user’s study content to train RightVector-owned
+artificial-intelligence models.</li>
+</ul>
+<h2 id="locally-stored-study-data">2. Locally Stored Study Data</h2>
+<p>RecallForge may store information on the user’s device,
+including:</p>
+<ul>
+<li>certification Tracks;</li>
+<li>Decks and topic names;</li>
+<li>flashcard questions and answers;</li>
+<li>review history and study schedules;</li>
+<li>FSRS-5 scheduling information;</li>
+<li>progress, readiness, and streak information;</li>
+<li>imported study material; and</li>
+<li>App settings and preferences.</li>
+</ul>
+<p>This information is designed to remain locally on the user’s device
+unless the user affirmatively invokes functionality requiring external
+processing, exports or shares the information, or otherwise causes it to
+leave the device.</p>
+<p>RightVector does not provide a RecallForge cloud account for
+centrally storing or synchronizing this study database.</p>
+<h2 id="ai-powered-flashcard-generation">3. AI-Powered Flashcard
+Generation</h2>
+<p>RecallForge includes an optional feature that uses artificial
+intelligence to generate flashcards from text voluntarily selected or
+supplied by the user.</p>
+<p>When a user invokes this feature, the text necessary to fulfill the
+request is transmitted through a server-side proxy and submitted to the
+<strong>OpenAI API</strong> for processing by an OpenAI model. The
+OpenAI API credential is maintained server-side and is not intended to
+be embedded in the App.</p>
+<p>Use of this feature is voluntary. Users who do not want study content
+transmitted to an external AI service should not use AI-powered card
+generation.</p>
+<p>RightVector does not use content submitted through this feature for
+advertising, profiling, sale of personal information, or training
+RightVector-owned AI models.</p>
+<p>OpenAI is a third-party service provider. OpenAI currently states
+that, by default, it does not use inputs or outputs submitted through
+its API to train or improve its models unless the API customer
+affirmatively opts in to data sharing. OpenAI’s practices, policies,
+technical architecture, and terms are controlled by OpenAI and may
+change independently of RecallForge.</p>
+<p>RightVector does not operate OpenAI’s infrastructure and does not
+have complete visibility into or control over OpenAI’s internal systems.
+Accordingly, RightVector cannot independently inspect, verify,
+represent, or guarantee the precise nature, location, duration, or
+manner in which OpenAI may process, log, retain, cache, back up, secure,
+disclose, or delete information or technical metadata associated with an
+API request.</p>
+<p>This may include, depending on OpenAI’s systems and policies,
+prompts, outputs, request bodies, IP addresses, timestamps, network
+information, security or abuse-prevention information, and other
+technical or operational data.</p>
+<p>To the maximum extent permitted by applicable law, RightVector is not
+responsible for independent acts, omissions, systems, security
+practices, policy changes, data-processing practices, retention
+practices, or other conduct of OpenAI or another third-party provider
+that is outside RightVector’s reasonable control.</p>
+<p>Nothing in this Privacy Policy excludes or limits any responsibility
+or liability that cannot lawfully be excluded or limited.</p>
+<p>Users who require specific assurances regarding OpenAI’s processing
+should review OpenAI’s then-current API, business-data, privacy,
+security, and retention documentation before using RecallForge’s AI
+functionality.</p>
+<h2 id="openai-data-handling">4. OpenAI Data Handling</h2>
+<p>As of the effective date of this Privacy Policy, OpenAI publicly
+states that API inputs and outputs are not used to train its models by
+default unless the API customer explicitly opts in.</p>
+<p>OpenAI also publishes data-retention practices applicable to its API
+services. Those practices may depend on the API endpoint, configuration,
+customer eligibility, legal requirements, security requirements,
+abuse-prevention measures, or other circumstances.</p>
+<p>RightVector does not independently audit OpenAI and therefore does
+not promise that information submitted for AI processing:</p>
+<ul>
+<li>is never logged;</li>
+<li>is never temporarily retained;</li>
+<li>is never cached or backed up;</li>
+<li>is deleted immediately;</li>
+<li>is retained for any particular period;</li>
+<li>is processed only in a particular geographic location; or</li>
+<li>is immune from disclosure when disclosure is legally required.</li>
+</ul>
+<p>OpenAI’s then-current contractual terms and published policies govern
+OpenAI’s own handling of information. Those terms and practices may
+change without control by RightVector.</p>
+<h2 id="information-users-should-not-submit-to-ai-processing">5.
+Information Users Should Not Submit to AI Processing</h2>
+<p>Because AI-powered flashcard generation requires information to leave
+the device, users should assume that text submitted to the AI feature
+will be transmitted to external infrastructure.</p>
+<p><strong>Do not submit information through the AI feature that you
+would not want transmitted to a third-party service
+provider.</strong></p>
+<p>In particular, users should not submit:</p>
+<ul>
+<li>passwords, authentication credentials, private keys, or API
+keys;</li>
+<li>Social Security numbers or government identification numbers;</li>
+<li>payment-card or financial-account information;</li>
+<li>protected health information or medical records;</li>
+<li>confidential employer, client, or customer information;</li>
+<li>trade secrets or proprietary business information;</li>
+<li>legally privileged material;</li>
+<li>personal information belonging to another person without appropriate
+authority;</li>
+<li>information subject to contractual confidentiality
+restrictions;</li>
+<li>export-controlled or similarly restricted information; or</li>
+<li>copyrighted or otherwise protected material that the user is not
+authorized to process.</li>
+</ul>
+<p>The user is responsible for determining whether information may
+lawfully and appropriately be transmitted to an external AI service.</p>
+<h2 id="photo-and-ocr-features">6. Photo and OCR Features</h2>
+<p>RecallForge may allow a user to use the device camera to capture text
+from textbooks, documents, whiteboards, or other materials.</p>
+<p>Optical character recognition (“OCR”) is designed to occur on the
+device. RecallForge does not require a captured photograph to be
+uploaded to RightVector merely to perform OCR.</p>
+<p>If the user subsequently chooses to submit extracted text to
+AI-powered flashcard generation, the relevant text may be transmitted
+through the server-side proxy to OpenAI as described in this Privacy
+Policy.</p>
+<p>The user is responsible for ensuring that the user has the right to
+capture, process, reproduce, and use source material.</p>
+<h2 id="import-and-export">7. Import and Export</h2>
+<p>RecallForge may permit users to import or export study information
+using supported formats such as JSON, CSV, or TSV.</p>
+<p>Importing a file does not, by itself, require RightVector to maintain
+a server-side copy of that file.</p>
+<p>When a user exports, saves, transmits, or shares information from
+RecallForge, the user controls the resulting file and its destination.
+Once information leaves RecallForge at the user’s direction, its
+subsequent handling may be governed by the receiving application,
+operating system, cloud-storage provider, messaging service, device, or
+other third party.</p>
+<p>RightVector is not responsible for third-party handling of
+information after the user elects to export or share it, except to the
+extent responsibility cannot lawfully be excluded.</p>
+<h2 id="share-extension">8. Share Extension</h2>
+<p>RecallForge may allow users to send text or other supported content
+to the App using operating-system sharing functionality.</p>
+<p>Content received through the RecallForge Share Extension is used to
+provide the functionality requested by the user. If the user requests
+AI-powered generation using that content, the necessary text may be
+transmitted for external processing as described above.</p>
+<h2 id="pin-face-id-and-touch-id">9. PIN, Face ID, and Touch ID</h2>
+<p>RecallForge may provide an optional PIN and may support device
+authentication technologies such as Face ID or Touch ID.</p>
+<p>Biometric authentication is performed through Apple’s
+operating-system security mechanisms. RecallForge is not designed to
+receive or store the user’s underlying fingerprint or facial biometric
+template.</p>
+<p>Local security features are intended to help restrict access to the
+App on the device. They do not create a RightVector cloud account and do
+not guarantee that a device or its data cannot be compromised.</p>
+<h2 id="technical-and-operational-data">10. Technical and Operational
+Data</h2>
+<p>Internet-based services inherently involve communications among
+devices, networks, servers, infrastructure providers, and service
+providers.</p>
+<p>Although RecallForge is designed to minimize collection of personal
+information, infrastructure used to provide externally processed
+features may automatically process technical information such as IP
+addresses, timestamps, network requests, device or protocol
+characteristics, security information, error information, or server
+logs.</p>
+<p>Such processing may occur for purposes including transmitting
+requests, providing requested functionality, maintaining security,
+preventing fraud or abuse, diagnosing failures, operating
+infrastructure, or complying with law.</p>
+<p>RightVector does not use such information to create advertising
+profiles or sell personal information.</p>
+<p>RightVector may not have complete visibility into technical
+information automatically generated, logged, retained, or processed by
+third-party infrastructure providers.</p>
+<h2 id="analytics-advertising-and-tracking">11. Analytics, Advertising,
+and Tracking</h2>
+<p>RecallForge is not designed to serve third-party advertisements, sell
+personal information, or track users across unrelated applications or
+websites for advertising purposes.</p>
+<p>If these practices materially change in a future version of
+RecallForge, this Privacy Policy will be updated as appropriate and any
+legally required notices or choices will be provided.</p>
+<h2 id="third-party-services">12. Third-Party Services</h2>
+<p>RecallForge may rely on third-party technologies and infrastructure,
+including:</p>
+<ul>
+<li>Apple operating-system and device services;</li>
+<li>Internet, hosting, network, or server infrastructure; and</li>
+<li>the OpenAI API for optional AI-powered functionality.</li>
+</ul>
+<p>Third-party providers operate their own systems and may have
+independent terms, privacy practices, security measures, retention
+practices, subprocessors, and legal obligations.</p>
+<p>RightVector does not control the independent operation of third-party
+systems and cannot warrant their availability, security, accuracy,
+retention practices, or future conduct.</p>
+<h2 id="data-retention-and-deletion">13. Data Retention and
+Deletion</h2>
+<p>RecallForge’s primary study database is designed to reside locally on
+the user’s device.</p>
+<p>Users generally control retention of locally stored study information
+through the App and the device. Removing data from the App, or removing
+the App and its associated local data where supported by the operating
+system, may remove locally stored RecallForge information.</p>
+<p>RightVector generally does not maintain a centralized RecallForge
+user account containing the user’s study database and therefore
+generally does not possess a server-side study database that can be
+deleted on the user’s behalf.</p>
+<p>Information transmitted through external infrastructure may be
+processed or retained according to the applicable provider’s systems,
+configuration, contractual terms, security requirements, legal
+obligations, and retention practices.</p>
+<p>RightVector does not guarantee that information transmitted through
+third-party infrastructure is incapable of appearing temporarily in
+logs, caches, backups, security systems, abuse-prevention systems, or
+other operational infrastructure.</p>
+<p>Copies that users independently export, share, transmit, or back up
+outside RecallForge must be managed through the applicable destination
+or service.</p>
+<h2 id="security">14. Security</h2>
+<p>RightVector seeks to use reasonable safeguards appropriate to the
+nature and architecture of RecallForge. The App also provides or relies
+on device-level security capabilities where applicable.</p>
+<p>Nevertheless, no application, device, network, API, server,
+transmission mechanism, authentication method, or electronic storage
+system can be guaranteed to be completely secure, continuously
+available, or free from error or unauthorized access.</p>
+<p>Accordingly, RightVector does not warrant or guarantee absolute
+security.</p>
+<p>Users are responsible for maintaining appropriate security for their
+devices, device credentials, exported files, source materials, backups,
+and information they elect to transmit to third-party services.</p>
+<h2 id="ai-output-and-accuracy">15. AI Output and Accuracy</h2>
+<p>AI-generated flashcards and other AI-generated content may contain
+errors, omissions, inaccuracies, outdated information, fabricated
+information, or inappropriate interpretations of source material.</p>
+<p>AI-generated content is provided as a study aid and should be
+reviewed by the user before acceptance or use.</p>
+<p>RecallForge is not an official product of, endorsed by, or affiliated
+with any certification body merely because a user creates study
+materials relating to that certification.</p>
+<p>Users remain responsible for verifying study content against
+authoritative sources and applicable examination requirements.</p>
+<h2 id="user-responsibility-and-intellectual-property">16. User
+Responsibility and Intellectual Property</h2>
+<p>Users are solely responsible for content they create, photograph,
+import, export, share, or submit for AI processing and for ensuring they
+have all rights, permissions, licenses, and authority necessary to use
+that content.</p>
+<p>RecallForge does not grant users rights to reproduce or process
+third-party textbooks, examination materials, proprietary training
+content, websites, documents, or other protected material.</p>
+<p>Users are responsible for complying with applicable:</p>
+<ul>
+<li>copyright and intellectual-property laws;</li>
+<li>examination and certification-provider rules;</li>
+<li>employer policies;</li>
+<li>confidentiality obligations;</li>
+<li>contractual restrictions; and</li>
+<li>applicable laws and regulations.</li>
+</ul>
+<h2 id="no-professional-or-examination-guarantee">17. No Professional or
+Examination Guarantee</h2>
+<p>RecallForge is an educational and study-assistance tool.</p>
+<p>Use of RecallForge does not guarantee examination eligibility,
+examination performance, certification, employment, professional
+competence, or any particular result.</p>
+<p>Readiness scores, scheduling information, progress indicators, and
+similar features are informational estimates generated from study
+activity and should not be interpreted as a prediction or guarantee of
+examination performance.</p>
+<h2 id="childrens-privacy">18. Children’s Privacy</h2>
+<p>RecallForge is designed primarily for people studying for
+professional and industry certifications and is not directed to
+children.</p>
+<p>RightVector does not knowingly design RecallForge to collect personal
+information from children for advertising or profiling.</p>
+<p>If you believe a child has provided personal information directly to
+RightVector in circumstances requiring action under applicable law,
+contact RightVector using the information below.</p>
+<h2 id="legal-requirements">19. Legal Requirements</h2>
+<p>RightVector may preserve, access, use, or disclose information to the
+extent reasonably necessary to comply with applicable law, regulation,
+legal process, governmental request, or enforceable order; protect the
+security or integrity of services; investigate fraud or abuse; protect
+rights, property, or safety; or establish, exercise, or defend legal
+claims.</p>
+<p>Nothing in this Privacy Policy limits rights or obligations that
+cannot lawfully be limited.</p>
+<h2 id="international-processing">20. International Processing</h2>
+<p>Features involving Internet-based or third-party processing may cause
+information to be processed in jurisdictions other than the user’s
+location.</p>
+<p>By choosing to use functionality requiring external processing,
+information necessary to provide that functionality may be processed
+where applicable service providers or their subprocessors operate,
+subject to applicable law and the providers’ applicable terms.</p>
+<h2 id="changes-to-recallforge-and-this-privacy-policy">21. Changes to
+RecallForge and This Privacy Policy</h2>
+<p>RecallForge may evolve. Features, AI models, service providers,
+storage methods, technical architecture, and legal requirements may
+change.</p>
+<p>RightVector may revise this Privacy Policy to reflect changes to the
+App, service providers, practices, legal requirements, or operational
+considerations.</p>
+<p>The “Last Updated” date identifies the most recent revision. Where
+applicable law requires additional notice or consent for a material
+change, RightVector will provide it as required.</p>
+<h2 id="no-warranty-regarding-third-party-services">22. No Warranty
+Regarding Third-Party Services</h2>
+<p>To the maximum extent permitted by applicable law, RightVector makes
+no representation or warranty regarding the continuous availability,
+security, privacy practices, accuracy, performance, or conduct of
+third-party services used by or accessible through RecallForge.</p>
+<p>This provision does not exclude warranties, rights, remedies, or
+liabilities that cannot legally be excluded.</p>
+<h2 id="limitation-regarding-third-party-conduct">23. Limitation
+Regarding Third-Party Conduct</h2>
+<p>To the maximum extent permitted by applicable law, RightVector will
+not be responsible for losses or damages resulting solely from
+independent acts, omissions, security incidents, policy changes,
+processing practices, service interruptions, or other conduct of third
+parties outside RightVector’s reasonable control.</p>
+<p>Nothing in this section limits liability to the extent such
+limitation is prohibited by applicable law.</p>
+<h2 id="applicable-rights">24. Applicable Rights</h2>
+<p>Depending on where a user resides, applicable privacy law may provide
+rights concerning personal information.</p>
+<p>Because RecallForge is designed without a centralized user account
+and primary study data remains on the user’s device, RightVector may not
+possess information responsive to a particular request.</p>
+<p>Where applicable law grants a right concerning personal information
+actually controlled by RightVector, requests may be submitted using the
+contact information below and will be handled as required by applicable
+law.</p>
+<h2 id="contact">25. Contact</h2>
+<p>Questions regarding this Privacy Policy or RecallForge’s privacy
+practices may be directed to:</p>
+<p><strong>RightVector Consulting</strong><br />
+<strong>RecallForge: Cert Study</strong><br />
+Website: RightVectorConsulting.com<br />
+Email: <strong>privacy@rightvectorconsulting.com</strong></p>
+<hr />
+<h2 id="important-notice">Important Notice</h2>
+<p>This Privacy Policy describes RecallForge’s intended data-handling
+practices. It should be reviewed whenever the App’s architecture,
+third-party providers, logging configuration, analytics, data
+collection, or AI implementation changes.</p>
+<p>A separate <strong>Terms of Use</strong> should govern matters such
+as license terms, acceptable use, intellectual-property rights,
+AI-output disclaimers, warranty disclaimers, limitation of liability,
+termination, dispute provisions, and governing law. Those contractual
+provisions should not be treated as a substitute for accurate privacy
+disclosures.</p>
 </body>
-
 </html>
