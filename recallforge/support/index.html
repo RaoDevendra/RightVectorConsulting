@@ -1,558 +1,293 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 26.2.4.2 (MacOSX)"/>
-	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="00:00:00"/>
-	<meta name="Originator" content="Microsoft Word 15"/>
-	<meta name="ProgId" content="Word.Document"/>
-	<style type="text/css">
-		p { color: #000000 }
-		h2 { color: #000000 }
-	</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — RecallForge</title>
+<meta name="description" content="RecallForge support and frequently asked questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="https://rightvectorconsulting.com/recallforge/assets/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #080D1A; --bg-2: #0D1426; --surface: #121B31; --surface-2: #1A2540;
+    --border: #243152; --text: #F3F5FA; --body: #D3D9E6; --muted: #9DA8BF;
+    --blue: #2F7BFF; --blue-soft: rgba(47,123,255,0.14);
+    --ember: #FF6A2B; --ember-2: #FFB23F; --ember-soft: rgba(255,106,43,0.12);
+    --radius: 18px; --max: 1120px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+  body { font-family: "Inter", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text);
+         line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  h1, h2, h3, .brand { font-family: "Space Grotesk", "Inter", sans-serif; letter-spacing: -0.02em; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .grad { background: linear-gradient(95deg, var(--ember) 0%, var(--ember-2) 100%);
+          -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  nav.top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
+            background: rgba(8,13,26,0.82); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; }
+  .app-icon { display: block; width: 34px; height: 34px; flex-shrink: 0; border-radius: 8px;
+              background: url(data:image/webp;base64,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) center / cover no-repeat; box-shadow: 0 2px 10px rgba(37,99,235,.35); }
+  .nav-links { display: flex; gap: 28px; font-size: 0.92rem; color: var(--muted); }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+  .nav-links a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--ember); padding-bottom: 2px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 12px;
+         font-weight: 600; font-size: 0.95rem; transition: transform .15s ease, background .15s ease;
+         border: 1px solid transparent; cursor: pointer; font-family: inherit; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .btn-primary { background: linear-gradient(95deg, var(--ember), var(--ember-2)); color: #1A0E05;
+                 box-shadow: 0 8px 28px rgba(255,106,43,0.3); }
+  .btn-ghost { background: var(--surface); border-color: var(--border); color: var(--text); }
+  .btn-ghost:hover { background: var(--surface-2); }
+
+  /* Page header */
+  .page-head { position: relative; padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  .page-head::before { content: ""; position: absolute; inset: -68px 0 0 0; z-index: -1;
+    background: radial-gradient(ellipse 45% 70% at 82% 15%, rgba(47,123,255,0.22), transparent 70%),
+                radial-gradient(ellipse 25% 40% at 90% 10%, rgba(255,140,43,0.14), transparent 70%); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+             background: var(--ember-soft); color: var(--ember-2); font-size: 0.8rem; font-weight: 600;
+             letter-spacing: .04em; margin-bottom: 18px; }
+  .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 14px; }
+  .page-head p.lead { color: var(--muted); font-size: 1.08rem; max-width: 680px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .meta span { font-size: 0.84rem; padding: 6px 12px; border-radius: 10px; background: var(--surface);
+               border: 1px solid var(--border); color: var(--muted); }
+  .meta b { color: var(--text); font-weight: 600; }
+
+  /* Doc layout */
+  .doc { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; padding: 56px 0 88px; align-items: start; }
+  .toc { position: sticky; top: 92px; max-height: calc(100vh - 110px); overflow-y: auto; padding-right: 6px; }
+  .toc h4 { font-size: 0.74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ember); margin-bottom: 12px; }
+  .toc ol { list-style: none; border-left: 1px solid var(--border); }
+  .toc a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; border-left: 2px solid transparent;
+           font-size: 0.86rem; color: var(--muted); line-height: 1.35; }
+  .toc a:hover { color: var(--text); }
+  .toc a.active { color: var(--text); border-left-color: var(--ember); }
+  .toc::-webkit-scrollbar { width: 4px; } .toc::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .prose { max-width: 760px; color: var(--body); font-size: 1rem; line-height: 1.75; }
+  .prose .intro { font-size: 1.06rem; color: var(--text); }
+  .prose section { padding-top: 40px; margin-top: 40px; border-top: 1px solid var(--border); }
+  .prose section:first-of-type { border-top: 0; margin-top: 24px; padding-top: 8px; }
+  .prose h2 { font-size: 1.5rem; line-height: 1.25; color: var(--text); margin-bottom: 16px; display: flex; gap: 14px; align-items: baseline; }
+  .prose h2 .num { flex-shrink: 0; font-size: 0.85rem; font-weight: 700; color: var(--ember); background: var(--ember-soft);
+                   border-radius: 8px; padding: 3px 9px; transform: translateY(-3px); font-family: "Inter", sans-serif; }
+  .prose h3 { font-size: 1.12rem; color: var(--text); margin: 24px 0 10px; }
+  .prose p { margin: 0 0 14px; }
+  .prose strong { color: var(--text); font-weight: 600; }
+  .prose ul, .prose ol { margin: 4px 0 18px; padding-left: 0; list-style: none; }
+  .prose li { position: relative; padding-left: 24px; margin: 6px 0; }
+  .prose ul li::before { content: ""; position: absolute; left: 4px; top: 0.72em; width: 7px; height: 7px;
+                         border-radius: 2px; background: linear-gradient(135deg, var(--ember), var(--ember-2)); }
+  .prose ol { counter-reset: n; }
+  .prose ol li { counter-increment: n; padding-left: 36px; }
+  .prose ol li::before { content: counter(n); position: absolute; left: 0; top: 0.15em; width: 24px; height: 24px;
+                         border-radius: 7px; background: var(--ember-soft); color: var(--ember-2); font-size: 0.8rem;
+                         font-weight: 700; display: grid; place-items: center; line-height: 1; }
+  .prose a { color: var(--ember-2); border-bottom: 1px solid rgba(255,178,63,.35); overflow-wrap: anywhere; }
+  .prose a:hover { border-bottom-color: var(--ember-2); }
+  .prose code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.88em; background: var(--surface-2);
+                padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--ember);
+             border-radius: 12px; padding: 16px 18px; margin: 0 0 16px; font-size: 0.92rem; letter-spacing: .01em; }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); background: var(--bg-2); }
+  footer .foot-top { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; padding-top: 36px; padding-bottom: 32px; }
+  .site-legal { padding-top: 28px; padding-bottom: 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; line-height: 1.65; }
+  .site-legal h4 { font-family: "Space Grotesk", sans-serif; font-size: 0.95rem; color: var(--text); margin-bottom: 12px; letter-spacing: -0.01em; }
+  .site-legal p { margin-bottom: 10px; max-width: 920px; }
+  .site-legal a { color: var(--ember-2); border-bottom: 1px solid rgba(255,178,63,.35); }
+  .foot-bottom { border-top: 1px solid var(--border); background: var(--bg); padding: 20px 0 28px; color: var(--muted); font-size: 0.8rem; }
+  .foot-bottom p { max-width: 920px; margin-bottom: 4px; }
+  .foot-bottom strong { color: var(--text); font-weight: 600; }
+  footer .links { display: flex; gap: 10px; flex-wrap: wrap; }
+  footer .links .btn { padding: 9px 14px; font-size: 0.88rem; }
+  footer .copy { color: var(--muted); font-size: 0.86rem; }
+
+  @media (max-width: 900px) {
+    .nav-links { gap: 16px; font-size: 0.85rem; }
+    .nav-links .wide-only { display: none; }
+    .doc { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+    .toc { position: static; max-height: none; background: var(--surface); border: 1px solid var(--border);
+           border-radius: var(--radius); padding: 18px 18px 12px; }
+    .toc details summary { cursor: pointer; list-style: none; }
+    .toc ol { margin-top: 10px; max-height: 240px; overflow-y: auto; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .brand span { display: none; }
+    .page-head { padding: 48px 0 32px; }
+    .prose h2 { font-size: 1.3rem; }
+    footer .foot-top { flex-direction: column; text-align: center; }
+    footer .links { justify-content: center; }
+  }
+
+  .search { display: block; position: relative; margin-top: 28px; max-width: 560px; }
+  .search svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--muted); }
+  .search input { width: 100%; padding: 15px 16px 15px 48px; border-radius: 14px; border: 1px solid var(--border);
+                  background: var(--surface); color: var(--text); font: inherit; font-size: 1rem; outline: none; }
+  .search input:focus { border-color: var(--ember); box-shadow: 0 0 0 3px var(--ember-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip { font-size: 0.84rem; padding: 7px 13px; border-radius: 999px; background: var(--surface);
+          border: 1px solid var(--border); color: var(--muted); }
+  .chip:hover { color: var(--text); border-color: rgba(255,106,43,.5); }
+  .support-body { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 48px; padding: 56px 0 88px; align-items: start; }
+  .faq-group { margin-bottom: 44px; }
+  .faq-group h2 { font-size: 1.45rem; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+  .faq-group h2 small { font-family: "Inter", sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--ember-2);
+                        background: var(--ember-soft); padding: 3px 9px; border-radius: 999px; }
+  .faq { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px;
+         transition: border-color .15s ease; }
+  .faq[open] { border-color: rgba(255,106,43,.45); }
+  .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+                 gap: 16px; padding: 16px 20px; font-weight: 600; color: var(--text); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary i { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; background: var(--surface-2); position: relative; }
+  .faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 2px;
+                 background: var(--ember-2); transform: translate(-50%,-50%); transition: transform .2s ease; }
+  .faq summary i::after { transform: translate(-50%,-50%) rotate(90deg); }
+  .faq[open] summary i::after { transform: translate(-50%,-50%) rotate(0deg); }
+  .faq summary:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; border-radius: 14px; }
+  .ans { padding: 0 20px 18px; color: var(--body); line-height: 1.7; }
+  .ans p { margin-bottom: 10px; } .ans p:last-child { margin-bottom: 0; }
+  .ans strong { color: var(--text); font-weight: 600; }
+  .ans .arrow { color: var(--ember); font-weight: 700; }
+  .ans ul, .ans ol { list-style: none; margin: 6px 0 10px; }
+  .ans li { position: relative; padding-left: 24px; margin: 6px 0; }
+  .ans ul li::before { content: ""; position: absolute; left: 4px; top: .72em; width: 7px; height: 7px; border-radius: 2px;
+                       background: linear-gradient(135deg, var(--ember), var(--ember-2)); }
+  .ans ol { counter-reset: n; } .ans ol li { counter-increment: n; padding-left: 36px; }
+  .ans ol li::before { content: counter(n); position: absolute; left: 0; top: .15em; width: 24px; height: 24px; border-radius: 7px;
+                       background: var(--ember-soft); color: var(--ember-2); font-size: .8rem; font-weight: 700;
+                       display: grid; place-items: center; }
+  .side { position: sticky; top: 92px; display: flex; flex-direction: column; gap: 16px; }
+  .side-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .side-card.hot { background: linear-gradient(135deg, #2A1810 0%, #1B1E26 70%); border-color: rgba(255,106,43,.35); }
+  .side-card .icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+                     background: var(--ember-soft); color: var(--ember); margin-bottom: 14px; }
+  .side-card .icon svg { width: 22px; height: 22px; }
+  .side-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .side-card p { color: var(--muted); font-size: .92rem; margin-bottom: 16px; }
+  .side-card .btn { width: 100%; justify-content: center; }
+  .side-card ul { list-style: none; } .side-card li a { display: block; padding: 7px 0; color: var(--muted); font-size: .92rem; }
+  .side-card li a:hover { color: var(--text); }
+  .empty { display: none; text-align: center; padding: 40px; color: var(--muted); background: var(--surface);
+           border: 1px dashed var(--border); border-radius: var(--radius); }
+  .legal-note { border-top: 1px solid var(--border); padding: 40px 0 16px; }
+  .legal-note details { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); }
+  .legal-note summary { cursor: pointer; padding: 18px 22px; font-weight: 600; font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; }
+  .legal-note .inner { padding: 0 22px 20px; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+  .legal-note .inner p { margin-bottom: 12px; }
+  .legal-note a { color: var(--ember-2); }
+  @media (max-width: 900px) {
+    .support-body { grid-template-columns: 1fr; padding-top: 36px; }
+    .side { position: static; }
+  }
+</style>
 </head>
-<body lang="en-US" text="#000000" dir="ltr"><p class="msonormal" style="text-decoration: none"><a name="OLE_LINK3"></a>
-<font color="#000000"><font face="Helvetica Neue"><font size="5" style="font-size: 18pt"><b>RecallForge</b></font></font></font><font color="#000000">
-— </font><font color="#000000"><font face="Helvetica Neue"><font size="5" style="font-size: 18pt"><b>Frequently
-Asked Questions</b></font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Getting
-Started</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is RecallForge?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">RecallForge</font></font></font><font color="#000000">
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">is
-a flashcard and spaced repetition app built specifically for
-professionals studying for industry certifications — PMP, AWS,
-CISSP, CPA, and others. It combines AI-powered flashcard creation
-with a smart review scheduler so you retain what you study, not just
-what you reviewed the night before.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Do
-I need an account to use RecallForge?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">No.
-RecallForge works entirely on your device with no account or sign-in
-required. Your study data stays local.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-certifications does RecallForge support?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">RecallForge</font></font></font><font color="#000000">
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">works
-for any certification you are preparing for. When you first launch
-the app, you name your own certification track. You can add as many
-tracks as you need from the Library tab.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-is RecallForge different from generic flashcard apps?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Three
-things set it apart: (1) it uses FSRS-5, the most accurate spaced
-repetition algorithm available, to schedule reviews at exactly the
-right time; (2) it generates flashcards from your own source material
-using AI rather than requiring you to create every card manually; and
-(3) its organization mirrors how professional certification exams are
-structured — by domain and topic area.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Organization:
-Tracks, Decks, and Card Sets</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is a Track?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">A
-Track represents one certification you are preparing for — for
-example, &quot;AWS Solutions Architect Associate&quot; or &quot;PMP.&quot;
-Everything in RecallForge lives inside a Track.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is a Domain Deck?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">A
-Domain Deck is a subdivision within a Track that maps to an exam
-domain or knowledge area. For example, a PMP track might have decks
-for &quot;Project Integration,&quot; &quot;Risk Management,&quot; and
-&quot;Stakeholder Engagement.&quot; Organizing cards this way lets
-you see your readiness per domain, just as the exam measures you.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is a Card Set?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">A
-Card Set is an optional grouping inside a deck for a specific topic
-or session — for example, &quot;Week 3 Notes&quot; or &quot;Chapter
-5 — Procurement.&quot; Card Sets help you organize cards that came
-from the same source material.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I create a Track?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Go
-to the </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Library</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-tab </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>+</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>New
-Track</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">.
-Enter the certification name and choose a category.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I add a Deck to a Track?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Open
-a Track from the Library </font></font></font><font color="#000000">→
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>+</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>New
-Domain Deck</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I have multiple Tracks at the same time?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-You can prepare for multiple certifications simultaneously. Each
-Track is independent with its own decks, cards, and readiness score.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Creating
-Flashcards</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I create cards manually?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Open
-any Deck </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>+</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>New
-Card</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">.
-Enter the front (question) and back (answer). Tap Save.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is AI Generate?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">AI
-Generate is the fastest way to create cards. You provide study
-material — pasted text, a PDF, or content from a web page — and
-the AI produces up to 10 focused flashcards from it in seconds. Each
-generation uses one AI call.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is Photo + OCR?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Photo
-+ OCR lets you take a photo of printed material — a textbook page,
-whiteboard, or printed study guide — and extract the text on-device
-using Apple's Vision framework (no AI call used for extraction). You
-can then review the extracted text and generate cards from it with
-one AI call.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-many free AI calls do I get?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">RecallForge</font></font></font><font color="#000000">
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">includes
-10 complimentary AI generation calls. Each call can produce up to 10
-cards from your source material.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-counts as one AI call?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Any
-single generation — whether from text, PDF, or photo OCR — counts
-as one call, regardless of how many cards are returned.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is the word limit for AI generation?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Source
-material must be under 4,000 words per generation. If your content is
-longer, split it into sections and generate separately, one section
-per call.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I generate cards from a PDF?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-In the </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Quick
-Add</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-tab </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>AI
-Generate</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">switch
-to the </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>PDF</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-tab </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-to select a PDF file. Text is extracted on-device from the PDF, then
-you use one AI call to generate cards. Password-protected or
-scanned-image PDFs are not supported — for scanned PDFs, use Photo
-+ OCR instead.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I generate cards from a web page?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">RecallForge</font></font></font><font color="#000000">
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">cannot
-fetch web pages directly, but you can paste the text content from any
-page into the Text input in AI Generate. The URL tab is provided as a
-label reminder — paste the content, not the URL itself.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I use the Share Extension?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">In
-Safari or any app, select text or use the Share button </font></font></font><font color="#000000">→
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>RecallForge</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-in the share sheet. The selected content opens directly in AI
-Generate with the text pre-filled, ready for card generation.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I edit AI-generated cards before saving them?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-After generation, every card goes into an <b>AI Review Queue</b>
-where you can edit the front and back of each card, delete cards you
-don't want, and confirm the destination deck before saving anything.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Does
-the 10-call limit restrict how many cards or decks I can create?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Not
-at all. The 10 AI call limit only applies to in-app AI generation.
-You can create unlimited Tracks, Domain Decks, Card Sets, and
-individual flashcards manually — there is no cap on any of them.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I create cards outside the app and import them?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-RecallForge supports importing flashcards from a tab-separated (.tsv)
-file. Each row in the file represents one card, with the front
-(question) in the first column and the back (answer) in the second
-column. You can create this file in any spreadsheet app — Numbers,
-Excel, or Google Sheets — and import it directly into any Deck.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is the .tsv format and how do I create one?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">A
-.tsv file is a plain text file where columns are separated by a tab
-character. To create one:</font></font></p>
-<p><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">1.</font></font></font><span style="font-variant: normal"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">&nbsp;&nbsp;&nbsp;
-</font></font></font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Open
-Numbers, Excel, or Google Sheets</font></font></font></p>
-<p><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">2.</font></font></font><span style="font-variant: normal"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">&nbsp;&nbsp;&nbsp;
-</font></font></font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Put
-your questions in column A and answers in column B — one card per
-row, no header row needed</font></font></font></p>
-<p><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">3.</font></font></font><span style="font-variant: normal"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">&nbsp;&nbsp;&nbsp;
-</font></font></font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Export
-or save as Tab Separated Values (.tsv)</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I use ChatGPT, Claude, or other AI tools to generate my .tsv file?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Absolutely
-— and this is a great way to get unlimited AI-generated cards with
-no in-app call limit. Paste your study material into any AI tool and
-ask it to produce a two-column tab-separated list of
-question-and-answer flashcards. Copy the output into a spreadsheet,
-save as .tsv, and import into RecallForge. You get the full power of
-AI card generation with no restrictions.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I import a .tsv file into RecallForge?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Go
-to </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Quick
-Add</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-tab </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Import
-from File</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">select
-your .tsv file </font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">choose
-the destination Track and Deck </font></font></font><font color="#000000">→
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-Import. Your cards are added immediately and scheduled for review.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Is
-there a limit on how many cards I can import at once?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">There
-is no hard limit on import size. Very large imports (thousands of
-cards) may take a moment to process. Once imported, all cards are
-available for study and begin accumulating their FSRS-5 review
-schedule as you work through them.</font></font></p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Studying
-and Reviews</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-does spaced repetition work?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">After
-you review a card, you rate how well you knew it: <b>Again</b>, <b>Hard</b>,
-<b>Good</b>, or <b>Easy</b>. RecallForge uses the FSRS-5 algorithm to
-calculate when you should see that card again. Cards you rate Easy
-reappear much later. Cards you rate Again come back the same day.
-Over time the schedule becomes personalized to your actual memory.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is the Today tab?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">The
-Today tab is your daily study hub. It shows how many cards are due
-for review today across all your tracks and decks. Tap <b>Start
-Review</b> to begin a session.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-do the study session ratings mean?</b></font></font></p>
-<p><font color="#000000">•</font><span style="font-variant: normal"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Again</b></font></font></font><font color="#000000">
-— </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">you
-didn't remember. The card resets and will appear again very soon.</font></font></font></p>
-<p><font color="#000000">•</font><span style="font-variant: normal"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Hard</b></font></font></font><font color="#000000">
-— </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">you
-remembered but with difficulty. The next interval increases slightly.</font></font></font></p>
-<p><font color="#000000">•</font><span style="font-variant: normal"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Good</b></font></font></font><font color="#000000">
-— </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">you
-remembered comfortably. The card follows its normal schedule.</font></font></font></p>
-<p><font color="#000000">•</font><span style="font-variant: normal"><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</font></span><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Easy</b></font></font></font><font color="#000000">
-— </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">you
-knew it instantly. The next interval extends significantly.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-long is a typical study session?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Sessions
-are as long as your due cards require. RecallForge shows your
-progress through the session (e.g., &quot;12 of 30&quot;) and a
-completion screen when you finish.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Can
-I study a specific deck rather than everything due today?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-Open any Deck from the Library </font></font></font><font color="#000000">→
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Study
-This Deck</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-to review only cards in that deck.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-if I have no cards due today?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">The
-Today tab will tell you that you're caught up and show when your next
-review is scheduled.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Readiness
-Score</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is the Readiness Score?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">The
-Readiness Score is a percentage that reflects how well you know your
-material across a Deck or Track, based on your review history and
-FSRS-5 stability estimates. A score of 100% means all your cards are
-well-retained. New cards with no review history count against the
-score.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I improve my Readiness Score?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Complete
-your daily reviews consistently. Rating cards Good or Easy increases
-the score faster than rating Again or Hard. Adding new cards
-temporarily reduces the score until those cards have been reviewed.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Where
-do I see my Readiness Score?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Each
-Deck and Track shows its readiness score in the Library. The Progress
-tab gives an overview across all your study material.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Security
-and Privacy</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Does
-RecallForge collect any of my data?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">No
-personal data is collected or stored by RecallForge. All study
-content, cards, and review history remain on your device.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Is
-my study content sent to the internet?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Only
-when you use AI card generation. The text you submit for generation
-is sent to OpenAI's API to produce flashcards. This is the only
-outbound data transfer. Photos are processed entirely on-device using
-Apple's Vision framework.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-is the PIN / Face ID lock?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">You
-can set a PIN during onboarding or from Settings. Once set,
-RecallForge locks automatically when you leave the app and requires
-PIN or Face ID to re-enter. This keeps your study content private if
-someone else picks up your device.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>How
-do I change or remove my PIN?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Go
-to </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Settings</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>App
-Lock</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-to change or disable your PIN.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>What
-happens if I delete and reinstall the app?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Your
-study data (cards, decks, tracks, review history) is stored on-device
-using SwiftData and will be lost if the app is deleted. Your PIN is
-cleared on reinstall so you can set a new one.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Progress
-and Statistics</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Where
-can I see my overall study progress?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">The
-<b>Progress</b> tab shows your study statistics across all tracks:
-total cards, cards reviewed, streak, readiness by deck, and recent
-session history.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Does
-RecallForge support streaks?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-The Progress tab tracks your consecutive days of completing at least
-one review session.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Widget</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Does
-RecallForge have a home screen widget?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Yes.
-Long-press your home screen </font></font></font><font color="#000000">→
-</font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">tap
-</font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>+</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">
-</font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">search
-for RecallForge to add the widget. It shows how many cards are due
-for review today so you can stay on schedule at a glance.</font></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none">⸻</p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="4" style="font-size: 16pt"><b>Troubleshooting</b></font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>AI
-generation returned no cards — what do I do?</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">This
-usually means the source text was too short, too sparse, or written
-in a way the AI couldn't extract clear question-answer pairs from.
-Try providing more structured content — definitions, process steps,
-rules, or principles — and generate again.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>The
-app says I have no AI calls remaining.</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">You
-have used all 10 complimentary calls included with the app.
-Additional AI generation is on the roadmap for a future update.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>My
-cards aren't appearing in Today's review.</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Cards
-only appear in Today's review when they are due based on their FSRS-5
-schedule. Newly created cards that have never been studied will
-appear on their first scheduled review day — typically the same day
-or the following day. You can also study any deck directly from the
-Library without waiting for the scheduled date.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>I
-lost my study data after reinstalling.</b></font></font></p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Study
-data is stored locally on your device and is not backed up to iCloud
-in the current version. Deleting the app permanently removes all
-data. Cloud backup is planned for a future release.</font></font></p>
-<p class="msonormal" style="text-decoration: none">&nbsp;</p>
-<p class="msonormal" style="text-decoration: none"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Face
-ID isn't working.</b></font></font></p>
-<p class="msonormal"><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">Make
-sure RecallForge has Face ID permission enabled in iPhone </font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Settings
-</b></font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>RecallForge
-</b></font></font></font><font color="#000000">→ </font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt"><b>Face
-ID</b></font></font></font><font color="#000000"><font face="Helvetica Neue"><font size="3" style="font-size: 13pt">.
-You can always use your PIN as a fallback.</font></font></font></p>
-<p class="msonormal">&nbsp;</p>
-<p class="msonormal">&nbsp;</p>
-<p class="msonormal">&nbsp;</p>
-<h2>Legal &amp; Intellectual Property Notice</h2>
-<p>RecallForge: Cert Study, including its original software, user
-interface, design, branding, text, and original visual elements, is
-owned by RightVector Consulting or its licensors and is protected by
-applicable copyright, trademark, and other intellectual property
-laws. 
-</p>
-<p>Certain icons, graphics, fonts, images, symbols, software
-components, libraries, frameworks, or other materials used in or in
-connection with RecallForge may be owned by third parties and are
-used pursuant to applicable licenses, permissions, platform terms, or
-other lawful bases. Ownership of such third-party materials remains
-with their respective owners. Nothing in RecallForge or this website
-is intended to claim ownership of third-party intellectual property. 
-</p>
-<p>Product names, certification names, examination names, company
-names, logos, trademarks, service marks, and other identifiers
-referenced by RecallForge are the property of their respective
-owners. References to third-party certifications, products, or
-organizations are provided solely for identification, informational,
-and study-organization purposes. 
-</p>
-<p>RecallForge and RightVector Consulting are not affiliated with,
-sponsored by, endorsed by, or approved by any certification provider,
-examination organization, technology company, standards organization,
-or other third party merely because its name, certification, product,
-or trademark is referenced in the App. 
-</p>
-<p>Users are responsible for ensuring that materials they import,
-photograph, scan, copy, share, upload, or submit for AI processing
-through RecallForge may lawfully be used for those purposes.
-RecallForge does not grant users permission to reproduce, distribute,
-process, or create derivative works from copyrighted, confidential,
-proprietary, restricted, or otherwise protected third-party
-materials. 
-</p>
-<p>If you are an intellectual property owner or authorized
-representative and believe that material associated with RecallForge
-infringes your rights, please contact <a href="mailto:legal@rightvectorconsulting.com">legal@rightvectorconsulting.com
-</a>with sufficient information to identify the material and the
-rights claimed. Appropriate requests will be reviewed and addressed
-in accordance with applicable law. 
-</p>
-<p>© 2026 RightVector Consulting. All rights reserved. RecallForge:
-Cert Study and its original branding and content are protected to the
-extent provided by applicable law. Third-party trademarks and other
-intellectual property remain the property of their respective owners.
-</p>
-
-	<footer>
-
-    <p>
-
-        <a href="/recallforge/">RecallForge</a> |
-
-        <a href="/recallforge/support/">Support</a> |
-
-        <a href="/recallforge/privacy/">Privacy Policy</a> |
-
-        <a href="/recallforge/terms/">Terms of Use</a>
-
-    </p>
-
-    <p>
-
-        &copy; 2026 RightVector Consulting. All rights reserved.
-
-    </p>
-
-    <p>
-
-        Certification names, company names, product names, trademarks,
-
-        and service marks are the property of their respective owners.
-
-        RecallForge and RightVector Consulting are not affiliated with or
-
-        endorsed by third-party certification providers unless expressly stated.
-
-    </p>
-
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF6A2B"/><stop offset="1" stop-color="#FFB23F"/>
+    </linearGradient>
+  </defs>
+</svg>
+<nav class="top">
+  <div class="wrap">
+    <a href="https://rightvectorconsulting.com/recallforge/marketing/" class="brand" aria-label="RecallForge home"><i class="app-icon" aria-hidden="true"></i><span>RecallForge</span></a>
+    <div class="nav-links">
+      <a href="https://rightvectorconsulting.com/recallforge/marketing/#features" class="wide-only">Features</a>
+      <a href="https://rightvectorconsulting.com/recallforge/support/" aria-current="page">Support</a>
+      <a href="https://rightvectorconsulting.com/recallforge/privacy/">Privacy</a>
+      <a href="https://rightvectorconsulting.com/recallforge/terms/">Terms</a>
+    </div>
+  </div>
+</nav>
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Support</div>
+    <h1>How can we <span class="grad">help?</span></h1>
+    <p class="lead">Answers to common questions about RecallForge: getting started, creating cards, studying, and keeping your data private.</p>
+    <label class="search"><span class="sr" style="position:absolute;left:-9999px">Search questions</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="faq-search" type="search" placeholder="Search 48 questions…" autocomplete="off"></label>
+    <div class="chips"><a class="chip" href="#getting-started">Getting Started</a><a class="chip" href="#organization-tracks-decks-and-card-sets">Tracks, Decks, and Card Sets</a><a class="chip" href="#creating-flashcards">Creating Flashcards</a><a class="chip" href="#studying-and-reviews">Studying and Reviews</a><a class="chip" href="#readiness-score">Readiness Score</a><a class="chip" href="#security-and-privacy">Security and Privacy</a><a class="chip" href="#progress-and-statistics">Progress and Statistics</a><a class="chip" href="#widget">Widget</a><a class="chip" href="#troubleshooting">Troubleshooting</a></div>
+  </div>
+</header>
+<div class="wrap support-body">
+  <main>
+    <section class="faq-group" id="getting-started"><h2>Getting Started<small>4</small></h2><details class="faq"><summary><span>What is RecallForge?</span><i aria-hidden="true"></i></summary><div class="ans"><p>RecallForge is a flashcard and spaced repetition app built specifically for professionals studying for industry certifications — PMP, AWS, CISSP, CPA, and others. It combines AI-powered flashcard creation with a smart review scheduler so you retain what you study, not just what you reviewed the night before.</p></div></details><details class="faq"><summary><span>Do I need an account to use RecallForge?</span><i aria-hidden="true"></i></summary><div class="ans"><p>No. RecallForge works entirely on your device with no account or sign-in required. Your study data stays local.</p></div></details><details class="faq"><summary><span>What certifications does RecallForge support?</span><i aria-hidden="true"></i></summary><div class="ans"><p>RecallForge works for any certification you are preparing for. When you first launch the app, you name your own certification track. You can add as many tracks as you need from the Library tab.</p></div></details><details class="faq"><summary><span>How is RecallForge different from generic flashcard apps?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Three things set it apart: (1) it uses FSRS-5, the most accurate spaced repetition algorithm available, to schedule reviews at exactly the right time; (2) it generates flashcards from your own source material using AI rather than requiring you to create every card manually; and (3) its organization mirrors how professional certification exams are structured — by domain and topic area.</p></div></details></section><section class="faq-group" id="organization-tracks-decks-and-card-sets"><h2>Organization: Tracks, Decks, and Card Sets<small>6</small></h2><details class="faq"><summary><span>What is a Track?</span><i aria-hidden="true"></i></summary><div class="ans"><p>A Track represents one certification you are preparing for — for example, "AWS Solutions Architect Associate" or "PMP." Everything in RecallForge lives inside a Track.</p></div></details><details class="faq"><summary><span>What is a Domain Deck?</span><i aria-hidden="true"></i></summary><div class="ans"><p>A Domain Deck is a subdivision within a Track that maps to an exam domain or knowledge area. For example, a PMP track might have decks for "Project Integration," "Risk Management," and "Stakeholder Engagement." Organizing cards this way lets you see your readiness per domain, just as the exam measures you.</p></div></details><details class="faq"><summary><span>What is a Card Set?</span><i aria-hidden="true"></i></summary><div class="ans"><p>A Card Set is an optional grouping inside a deck for a specific topic or session — for example, "Week 3 Notes" or "Chapter 5 — Procurement." Card Sets help you organize cards that came from the same source material.</p></div></details><details class="faq"><summary><span>How do I create a Track?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Go to the <strong>Library</strong> tab <span class="arrow">→</span> tap <strong>+</strong> <span class="arrow">→</span> <strong>New Track</strong>. Enter the certification name and choose a category.</p></div></details><details class="faq"><summary><span>How do I add a Deck to a Track?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Open a Track from the Library <span class="arrow">→</span> tap <strong>+</strong> <span class="arrow">→</span> <strong>New Domain Deck</strong>.</p></div></details><details class="faq"><summary><span>Can I have multiple Tracks at the same time?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. You can prepare for multiple certifications simultaneously. Each Track is independent with its own decks, cards, and readiness score.</p></div></details></section><section class="faq-group" id="creating-flashcards"><h2>Creating Flashcards<small>16</small></h2><details class="faq"><summary><span>How do I create cards manually?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Open any Deck <span class="arrow">→</span> tap <strong>+</strong> <span class="arrow">→</span> <strong>New Card</strong>. Enter the front (question) and back (answer). Tap Save.</p></div></details><details class="faq"><summary><span>What is AI Generate?</span><i aria-hidden="true"></i></summary><div class="ans"><p>AI Generate is the fastest way to create cards. You provide study material — pasted text, a PDF, or content from a web page — and the AI produces up to 10 focused flashcards from it in seconds. Each generation uses one AI call.</p></div></details><details class="faq"><summary><span>What is Photo + OCR?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Photo + OCR lets you take a photo of printed material — a textbook page, whiteboard, or printed study guide — and extract the text on-device using Apple's Vision framework (no AI call used for extraction). You can then review the extracted text and generate cards from it with one AI call.</p></div></details><details class="faq"><summary><span>How many free AI calls do I get?</span><i aria-hidden="true"></i></summary><div class="ans"><p>RecallForge includes 10 complimentary AI generation calls. Each call can produce up to 10 cards from your source material.</p></div></details><details class="faq"><summary><span>What counts as one AI call?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Any single generation — whether from text, PDF, or photo OCR — counts as one call, regardless of how many cards are returned.</p></div></details><details class="faq"><summary><span>What is the word limit for AI generation?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Source material must be under 4,000 words per generation. If your content is longer, split it into sections and generate separately, one section per call.</p></div></details><details class="faq"><summary><span>Can I generate cards from a PDF?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. In the <strong>Quick Add</strong> tab <span class="arrow">→</span> <strong>AI Generate</strong> <span class="arrow">→</span> switch to the <strong>PDF</strong> tab <span class="arrow">→</span> tap to select a PDF file. Text is extracted on-device from the PDF, then you use one AI call to generate cards. Password-protected or scanned-image PDFs are not supported — for scanned PDFs, use Photo + OCR instead.</p></div></details><details class="faq"><summary><span>Can I generate cards from a web page?</span><i aria-hidden="true"></i></summary><div class="ans"><p>RecallForge cannot fetch web pages directly, but you can paste the text content from any page into the Text input in AI Generate. The URL tab is provided as a label reminder — paste the content, not the URL itself.</p></div></details><details class="faq"><summary><span>How do I use the Share Extension?</span><i aria-hidden="true"></i></summary><div class="ans"><p>In Safari or any app, select text or use the Share button <span class="arrow">→</span> tap <strong>RecallForge</strong> in the share sheet. The selected content opens directly in AI Generate with the text pre-filled, ready for card generation.</p></div></details><details class="faq"><summary><span>Can I edit AI-generated cards before saving them?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. After generation, every card goes into an <strong>AI Review Queue</strong> where you can edit the front and back of each card, delete cards you don't want, and confirm the destination deck before saving anything.</p></div></details><details class="faq"><summary><span>Does the 10-call limit restrict how many cards or decks I can create?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Not at all. The 10 AI call limit only applies to in-app AI generation. You can create unlimited Tracks, Domain Decks, Card Sets, and individual flashcards manually — there is no cap on any of them.</p></div></details><details class="faq"><summary><span>Can I create cards outside the app and import them?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. RecallForge supports importing flashcards from a tab-separated (.tsv) file. Each row in the file represents one card, with the front (question) in the first column and the back (answer) in the second column. You can create this file in any spreadsheet app — Numbers, Excel, or Google Sheets — and import it directly into any Deck.</p></div></details><details class="faq"><summary><span>What is the .tsv format and how do I create one?</span><i aria-hidden="true"></i></summary><div class="ans"><p>A .tsv file is a plain text file where columns are separated by a tab character. To create one:</p><ol><li>Open Numbers, Excel, or Google Sheets</li><li>Put your questions in column A and answers in column B — one card per row, no header row needed</li><li>Export or save as Tab Separated Values (.tsv)</li></ol></div></details><details class="faq"><summary><span>Can I use ChatGPT, Claude, or other AI tools to generate my .tsv file?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Absolutely — and this is a great way to get unlimited AI-generated cards with no in-app call limit. Paste your study material into any AI tool and ask it to produce a two-column tab-separated list of question-and-answer flashcards. Copy the output into a spreadsheet, save as .tsv, and import into RecallForge. You get the full power of AI card generation with no restrictions.</p></div></details><details class="faq"><summary><span>How do I import a .tsv file into RecallForge?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Go to <strong>Quick Add</strong> tab <span class="arrow">→</span> <strong>Import from File</strong> <span class="arrow">→</span> select your .tsv file <span class="arrow">→</span> choose the destination Track and Deck <span class="arrow">→</span> tap Import. Your cards are added immediately and scheduled for review.</p></div></details><details class="faq"><summary><span>Is there a limit on how many cards I can import at once?</span><i aria-hidden="true"></i></summary><div class="ans"><p>There is no hard limit on import size. Very large imports (thousands of cards) may take a moment to process. Once imported, all cards are available for study and begin accumulating their FSRS-5 review schedule as you work through them.</p></div></details></section><section class="faq-group" id="studying-and-reviews"><h2>Studying and Reviews<small>6</small></h2><details class="faq"><summary><span>How does spaced repetition work?</span><i aria-hidden="true"></i></summary><div class="ans"><p>After you review a card, you rate how well you knew it: <strong>Again</strong>, <strong>Hard</strong>, <strong>Good</strong>, or <strong>Easy</strong>. RecallForge uses the FSRS-5 algorithm to calculate when you should see that card again. Cards you rate Easy reappear much later. Cards you rate Again come back the same day. Over time the schedule becomes personalized to your actual memory.</p></div></details><details class="faq"><summary><span>What is the Today tab?</span><i aria-hidden="true"></i></summary><div class="ans"><p>The Today tab is your daily study hub. It shows how many cards are due for review today across all your tracks and decks. Tap <strong>Start Review</strong> to begin a session.</p></div></details><details class="faq"><summary><span>What do the study session ratings mean?</span><i aria-hidden="true"></i></summary><div class="ans"><ul><li><strong>Again</strong> — you didn't remember. The card resets and will appear again very soon.</li><li><strong>Hard</strong> — you remembered but with difficulty. The next interval increases slightly.</li><li><strong>Good</strong> — you remembered comfortably. The card follows its normal schedule.</li><li><strong>Easy</strong> — you knew it instantly. The next interval extends significantly.</li></ul></div></details><details class="faq"><summary><span>How long is a typical study session?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Sessions are as long as your due cards require. RecallForge shows your progress through the session (e.g., "12 of 30") and a completion screen when you finish.</p></div></details><details class="faq"><summary><span>Can I study a specific deck rather than everything due today?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. Open any Deck from the Library <span class="arrow">→</span> tap <strong>Study This Deck</strong> to review only cards in that deck.</p></div></details><details class="faq"><summary><span>What if I have no cards due today?</span><i aria-hidden="true"></i></summary><div class="ans"><p>The Today tab will tell you that you're caught up and show when your next review is scheduled.</p></div></details></section><section class="faq-group" id="readiness-score"><h2>Readiness Score<small>3</small></h2><details class="faq"><summary><span>What is the Readiness Score?</span><i aria-hidden="true"></i></summary><div class="ans"><p>The Readiness Score is a percentage that reflects how well you know your material across a Deck or Track, based on your review history and FSRS-5 stability estimates. A score of 100% means all your cards are well-retained. New cards with no review history count against the score.</p></div></details><details class="faq"><summary><span>How do I improve my Readiness Score?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Complete your daily reviews consistently. Rating cards Good or Easy increases the score faster than rating Again or Hard. Adding new cards temporarily reduces the score until those cards have been reviewed.</p></div></details><details class="faq"><summary><span>Where do I see my Readiness Score?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Each Deck and Track shows its readiness score in the Library. The Progress tab gives an overview across all your study material.</p></div></details></section><section class="faq-group" id="security-and-privacy"><h2>Security and Privacy<small>5</small></h2><details class="faq"><summary><span>Does RecallForge collect any of my data?</span><i aria-hidden="true"></i></summary><div class="ans"><p>No personal data is collected or stored by RecallForge. All study content, cards, and review history remain on your device.</p></div></details><details class="faq"><summary><span>Is my study content sent to the internet?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Only when you use AI card generation. The text you submit for generation is sent to OpenAI's API to produce flashcards. This is the only outbound data transfer. Photos are processed entirely on-device using Apple's Vision framework.</p></div></details><details class="faq"><summary><span>What is the PIN / Face ID lock?</span><i aria-hidden="true"></i></summary><div class="ans"><p>You can set a PIN during onboarding or from Settings. Once set, RecallForge locks automatically when you leave the app and requires PIN or Face ID to re-enter. This keeps your study content private if someone else picks up your device.</p></div></details><details class="faq"><summary><span>How do I change or remove my PIN?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Go to <strong>Settings</strong> <span class="arrow">→</span> <strong>App Lock</strong> to change or disable your PIN.</p></div></details><details class="faq"><summary><span>What happens if I delete and reinstall the app?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Your study data (cards, decks, tracks, review history) is stored on-device using SwiftData and will be lost if the app is deleted. Your PIN is cleared on reinstall so you can set a new one.</p></div></details></section><section class="faq-group" id="progress-and-statistics"><h2>Progress and Statistics<small>2</small></h2><details class="faq"><summary><span>Where can I see my overall study progress?</span><i aria-hidden="true"></i></summary><div class="ans"><p>The <strong>Progress</strong> tab shows your study statistics across all tracks: total cards, cards reviewed, streak, readiness by deck, and recent session history.</p></div></details><details class="faq"><summary><span>Does RecallForge support streaks?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. The Progress tab tracks your consecutive days of completing at least one review session.</p></div></details></section><section class="faq-group" id="widget"><h2>Widget<small>1</small></h2><details class="faq"><summary><span>Does RecallForge have a home screen widget?</span><i aria-hidden="true"></i></summary><div class="ans"><p>Yes. Long-press your home screen <span class="arrow">→</span> tap <strong>+</strong> <span class="arrow">→</span> search for RecallForge to add the widget. It shows how many cards are due for review today so you can stay on schedule at a glance.</p></div></details></section><section class="faq-group" id="troubleshooting"><h2>Troubleshooting<small>5</small></h2><details class="faq"><summary><span>AI generation returned no cards — what do I do?</span><i aria-hidden="true"></i></summary><div class="ans"><p>This usually means the source text was too short, too sparse, or written in a way the AI couldn't extract clear question-answer pairs from. Try providing more structured content — definitions, process steps, rules, or principles — and generate again.</p></div></details><details class="faq"><summary><span>The app says I have no AI calls remaining.</span><i aria-hidden="true"></i></summary><div class="ans"><p>You have used all 10 complimentary calls included with the app. Additional AI generation is on the roadmap for a future update.</p></div></details><details class="faq"><summary><span>My cards aren&#x27;t appearing in Today&#x27;s review.</span><i aria-hidden="true"></i></summary><div class="ans"><p>Cards only appear in Today's review when they are due based on their FSRS-5 schedule. Newly created cards that have never been studied will appear on their first scheduled review day — typically the same day or the following day. You can also study any deck directly from the Library without waiting for the scheduled date.</p></div></details><details class="faq"><summary><span>I lost my study data after reinstalling.</span><i aria-hidden="true"></i></summary><div class="ans"><p>Study data is stored locally on your device and is not backed up to iCloud in the current version. Deleting the app permanently removes all data. Cloud backup is planned for a future release.</p></div></details><details class="faq"><summary><span>Face ID isn&#x27;t working.</span><i aria-hidden="true"></i></summary><div class="ans"><p>Make sure RecallForge has Face ID permission enabled in iPhone <strong>Settings</strong>→ <strong>RecallForge</strong>→ <strong>Face ID</strong>. You can always use your PIN as a fallback.</p></div></details></section>
+    <div class="empty" id="faq-empty">No matching questions. Try a different word, or email <a href="mailto:support@rightvectorconsulting.com" style="color:var(--ember-2)">support@rightvectorconsulting.com</a>.</div>
+  </main>
+  <aside class="side">
+    <div class="side-card hot">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+      <h3>Still need help?</h3>
+      <p>Can't find your answer? Send us a note and we'll get back to you.</p>
+      <a class="btn btn-primary" href="mailto:support@rightvectorconsulting.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Support</a>
+    </div>
+    <div class="side-card">
+      <h3>Policies</h3>
+      <ul>
+        <li><a href="https://rightvectorconsulting.com/recallforge/privacy/">Privacy Policy →</a></li>
+        <li><a href="https://rightvectorconsulting.com/recallforge/terms/">Terms of Use →</a></li>
+        <li><a href="#legal-notice">Legal &amp; IP Notice →</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="wrap foot-top">
+    <a href="https://rightvectorconsulting.com/recallforge/marketing/" class="brand"><i class="app-icon" aria-hidden="true"></i>RecallForge</a>
+    <div class="links">
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/privacy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Privacy Policy</a>
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/terms/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Terms of Use</a>
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/support/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5h.01"/></svg>Support</a>
+    </div>
+  </div>
+  <div class="wrap site-legal" id="legal-notice">
+    <h4>Legal &amp; Intellectual Property Notice</h4>
+    <p>RecallForge: Cert Study, including its original software, user interface, design, branding, text, and original visual elements, is owned by RightVector Consulting or its licensors and is protected by applicable copyright, trademark, and other intellectual property laws.</p><p>Certain icons, graphics, fonts, images, symbols, software components, libraries, frameworks, or other materials used in or in connection with RecallForge may be owned by third parties and are used pursuant to applicable licenses, permissions, platform terms, or other lawful bases. Ownership of such third-party materials remains with their respective owners. Nothing in RecallForge or this website is intended to claim ownership of third-party intellectual property.</p><p>Product names, certification names, examination names, company names, logos, trademarks, service marks, and other identifiers referenced by RecallForge are the property of their respective owners. References to third-party certifications, products, or organizations are provided solely for identification, informational, and study-organization purposes.</p><p>RecallForge and RightVector Consulting are not affiliated with, sponsored by, endorsed by, or approved by any certification provider, examination organization, technology company, standards organization, or other third party merely because its name, certification, product, or trademark is referenced in the App.</p><p>Users are responsible for ensuring that materials they import, photograph, scan, copy, share, upload, or submit for AI processing through RecallForge may lawfully be used for those purposes. RecallForge does not grant users permission to reproduce, distribute, process, or create derivative works from copyrighted, confidential, proprietary, restricted, or otherwise protected third-party materials.</p><p>If you are an intellectual property owner or authorized representative and believe that material associated with RecallForge infringes your rights, please contact <a href="mailto:legal@rightvectorconsulting.com">legal@rightvectorconsulting.com</a> with sufficient information to identify the material and the rights claimed. Appropriate requests will be reviewed and addressed in accordance with applicable law.</p><p>© 2026 RightVector Consulting. All rights reserved. RecallForge: Cert Study and its original branding and content are protected to the extent provided by applicable law. Third-party trademarks and other intellectual property remain the property of their respective owners.</p>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <p><strong>© 2026 RightVector Consulting. All rights reserved.</strong></p>
+      <p>Certification names, company names, product names, trademarks, and service marks are the property of their respective owners. RecallForge and RightVector Consulting are not affiliated with or endorsed by third-party certification providers unless expressly stated.</p>
+    </div>
+  </div>
 </footer>
+<script>
+(function () {
+  var input = document.getElementById('faq-search');
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.faq-group'));
+  var empty = document.getElementById('faq-empty');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase(), any = false;
+    groups.forEach(function (g) {
+      var shown = 0;
+      g.querySelectorAll('.faq').forEach(function (f) {
+        var hit = !q || f.textContent.toLowerCase().indexOf(q) !== -1;
+        f.style.display = hit ? '' : 'none';
+        if (q) f.open = hit; else f.open = false;
+        if (hit) shown++;
+      });
+      g.style.display = shown ? '' : 'none';
+      if (shown) any = true;
+    });
+    empty.style.display = any ? 'none' : 'block';
+  });
+})();
+</script>
 </body>
 </html>
-
