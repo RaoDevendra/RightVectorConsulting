@@ -5,86 +5,472 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RecallForge — Forge a Better You</title>
 <meta name="description" content="RecallForge is a spaced-repetition study app designed for professionals preparing for certification exams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="https://rightvectorconsulting.com/recallforge/assets/apple-touch-icon.png">
 <style>
-:root{--bg:#0b0d12;--panel:#151923;--text:#f7f8fb;--muted:#aeb6c5;--accent:#f2a33a;--accent2:#ffc56c;--border:rgba(255,255,255,.1);--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(circle at 50% 0,rgba(242,163,58,.14),transparent 32rem),var(--bg);color:var(--text);line-height:1.65}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}a{color:inherit}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--border)}
-.brand{font-size:1.25rem;font-weight:800}.navlinks{display:flex;gap:20px}.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--text)}
-.hero{text-align:center;padding:105px 0 90px}.eyebrow{display:inline-block;padding:7px 13px;border:1px solid rgba(242,163,58,.35);border-radius:999px;background:rgba(242,163,58,.08);color:var(--accent2);font-size:.8rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
-h1{font-size:clamp(3.8rem,10vw,7.2rem);line-height:.95;letter-spacing:-.065em;margin:24px 0 0}.tagline{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:750;letter-spacing:-.04em;color:var(--accent2);margin:25px 0 5px}.subtitle{font-size:clamp(1.1rem,2vw,1.35rem);color:var(--muted);margin:0}.lead{max-width:760px;margin:28px auto 0;font-size:1.12rem}
-.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:0 21px;border-radius:11px;border:1px solid var(--border);background:var(--panel);text-decoration:none;font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#171008}
-section{padding:72px 0}.sectionhead{max-width:720px;margin-bottom:36px}.sectionhead h2,.study h2{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.04em;line-height:1.1;margin:0 0 12px}.sectionhead p,.study p{color:var(--muted);font-size:1.08rem}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:linear-gradient(145deg,#191e29,var(--panel));border:1px solid var(--border);border-radius:18px;padding:29px;min-height:210px}.icon{width:44px;height:44px;border-radius:12px;background:rgba(242,163,58,.1);display:grid;place-items:center;color:var(--accent2);font-size:1.3rem;margin-bottom:21px}.card h3{font-size:1.25rem;margin:0 0 8px}.card p{margin:0;color:var(--muted)}.path{margin-top:17px;color:var(--accent2);font-weight:750}
-.study{text-align:center;margin:30px 0 75px;padding:55px 30px;border:1px solid var(--border);border-radius:22px;background:radial-gradient(circle,rgba(242,163,58,.11),transparent 68%),var(--panel)}.study p{max-width:670px;margin:0 auto}.store{display:inline-block;margin-top:30px;padding:14px 24px;border:1px solid var(--border);border-radius:11px;color:var(--muted);font-weight:700}
-footer{border-top:1px solid var(--border);padding:34px 0 45px;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:20px}.links{display:flex;gap:18px;flex-wrap:wrap}.links a{text-decoration:none}.legal{font-size:.78rem;color:#7f8999;max-width:900px;margin-top:24px}
-@media(max-width:720px){.grid{grid-template-columns:1fr}.hero{padding:72px 0 60px}section{padding:50px 0}.foot{flex-direction:column}}
-@media(max-width:480px){.container{width:calc(100% - 28px)}.navlinks{gap:10px;font-size:.85rem}.card{padding:23px}}
+  :root {
+    --bg: #080D1A; --bg-2: #0D1426; --surface: #121B31; --surface-2: #1A2540;
+    --border: #243152; --text: #F3F5FA; --body: #D3D9E6; --muted: #9DA8BF;
+    --blue: #2F7BFF; --blue-soft: rgba(47,123,255,0.14);
+    --ember: #FF6A2B; --ember-2: #FFB23F; --ember-soft: rgba(255,106,43,0.12);
+    --radius: 18px; --max: 1120px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+  body { font-family: "Inter", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text);
+         line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  h1, h2, h3, .brand { font-family: "Space Grotesk", "Inter", sans-serif; letter-spacing: -0.02em; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .grad { background: linear-gradient(95deg, var(--ember) 0%, var(--ember-2) 100%);
+          -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  nav.top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
+            background: rgba(8,13,26,0.82); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; }
+  .app-icon { display: block; width: 34px; height: 34px; flex-shrink: 0; border-radius: 8px;
+              background: url(data:image/webp;base64,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) center / cover no-repeat; box-shadow: 0 2px 10px rgba(37,99,235,.35); }
+  .nav-links { display: flex; gap: 28px; font-size: 0.92rem; color: var(--muted); }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+  .nav-links a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--ember); padding-bottom: 2px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 12px;
+         font-weight: 600; font-size: 0.95rem; transition: transform .15s ease, background .15s ease;
+         border: 1px solid transparent; cursor: pointer; font-family: inherit; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .btn-primary { background: linear-gradient(95deg, var(--ember), var(--ember-2)); color: #1A0E05;
+                 box-shadow: 0 8px 28px rgba(255,106,43,0.3); }
+  .btn-ghost { background: var(--surface); border-color: var(--border); color: var(--text); }
+  .btn-ghost:hover { background: var(--surface-2); }
+
+  /* Page header */
+  .page-head { position: relative; padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  .page-head::before { content: ""; position: absolute; inset: -68px 0 0 0; z-index: -1;
+    background: radial-gradient(ellipse 45% 70% at 82% 15%, rgba(47,123,255,0.22), transparent 70%),
+                radial-gradient(ellipse 25% 40% at 90% 10%, rgba(255,140,43,0.14), transparent 70%); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+             background: var(--ember-soft); color: var(--ember-2); font-size: 0.8rem; font-weight: 600;
+             letter-spacing: .04em; margin-bottom: 18px; }
+  .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin-bottom: 14px; }
+  .page-head p.lead { color: var(--muted); font-size: 1.08rem; max-width: 680px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .meta span { font-size: 0.84rem; padding: 6px 12px; border-radius: 10px; background: var(--surface);
+               border: 1px solid var(--border); color: var(--muted); }
+  .meta b { color: var(--text); font-weight: 600; }
+
+  /* Doc layout */
+  .doc { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; padding: 56px 0 88px; align-items: start; }
+  .toc { position: sticky; top: 92px; max-height: calc(100vh - 110px); overflow-y: auto; padding-right: 6px; }
+  .toc h4 { font-size: 0.74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ember); margin-bottom: 12px; }
+  .toc ol { list-style: none; border-left: 1px solid var(--border); }
+  .toc a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; border-left: 2px solid transparent;
+           font-size: 0.86rem; color: var(--muted); line-height: 1.35; }
+  .toc a:hover { color: var(--text); }
+  .toc a.active { color: var(--text); border-left-color: var(--ember); }
+  .toc::-webkit-scrollbar { width: 4px; } .toc::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .prose { max-width: 760px; color: var(--body); font-size: 1rem; line-height: 1.75; }
+  .prose .intro { font-size: 1.06rem; color: var(--text); }
+  .prose section { padding-top: 40px; margin-top: 40px; border-top: 1px solid var(--border); }
+  .prose section:first-of-type { border-top: 0; margin-top: 24px; padding-top: 8px; }
+  .prose h2 { font-size: 1.5rem; line-height: 1.25; color: var(--text); margin-bottom: 16px; display: flex; gap: 14px; align-items: baseline; }
+  .prose h2 .num { flex-shrink: 0; font-size: 0.85rem; font-weight: 700; color: var(--ember); background: var(--ember-soft);
+                   border-radius: 8px; padding: 3px 9px; transform: translateY(-3px); font-family: "Inter", sans-serif; }
+  .prose h3 { font-size: 1.12rem; color: var(--text); margin: 24px 0 10px; }
+  .prose p { margin: 0 0 14px; }
+  .prose strong { color: var(--text); font-weight: 600; }
+  .prose ul, .prose ol { margin: 4px 0 18px; padding-left: 0; list-style: none; }
+  .prose li { position: relative; padding-left: 24px; margin: 6px 0; }
+  .prose ul li::before { content: ""; position: absolute; left: 4px; top: 0.72em; width: 7px; height: 7px;
+                         border-radius: 2px; background: linear-gradient(135deg, var(--ember), var(--ember-2)); }
+  .prose ol { counter-reset: n; }
+  .prose ol li { counter-increment: n; padding-left: 36px; }
+  .prose ol li::before { content: counter(n); position: absolute; left: 0; top: 0.15em; width: 24px; height: 24px;
+                         border-radius: 7px; background: var(--ember-soft); color: var(--ember-2); font-size: 0.8rem;
+                         font-weight: 700; display: grid; place-items: center; line-height: 1; }
+  .prose a { color: var(--ember-2); border-bottom: 1px solid rgba(255,178,63,.35); overflow-wrap: anywhere; }
+  .prose a:hover { border-bottom-color: var(--ember-2); }
+  .prose code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.88em; background: var(--surface-2);
+                padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--ember);
+             border-radius: 12px; padding: 16px 18px; margin: 0 0 16px; font-size: 0.92rem; letter-spacing: .01em; }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); background: var(--bg-2); }
+  footer .foot-top { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; padding-top: 36px; padding-bottom: 32px; }
+  .site-legal { padding-top: 28px; padding-bottom: 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; line-height: 1.65; }
+  .site-legal h4 { font-family: "Space Grotesk", sans-serif; font-size: 0.95rem; color: var(--text); margin-bottom: 12px; letter-spacing: -0.01em; }
+  .site-legal p { margin-bottom: 10px; max-width: 920px; }
+  .site-legal a { color: var(--ember-2); border-bottom: 1px solid rgba(255,178,63,.35); }
+  .foot-bottom { border-top: 1px solid var(--border); background: var(--bg); padding: 20px 0 28px; color: var(--muted); font-size: 0.8rem; }
+  .foot-bottom p { max-width: 920px; margin-bottom: 4px; }
+  .foot-bottom strong { color: var(--text); font-weight: 600; }
+  footer .links { display: flex; gap: 10px; flex-wrap: wrap; }
+  footer .links .btn { padding: 9px 14px; font-size: 0.88rem; }
+  footer .copy { color: var(--muted); font-size: 0.86rem; }
+
+  @media (max-width: 900px) {
+    .nav-links { gap: 16px; font-size: 0.85rem; }
+    .nav-links .wide-only { display: none; }
+    .doc { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+    .toc { position: static; max-height: none; background: var(--surface); border: 1px solid var(--border);
+           border-radius: var(--radius); padding: 18px 18px 12px; }
+    .toc details summary { cursor: pointer; list-style: none; }
+    .toc ol { margin-top: 10px; max-height: 240px; overflow-y: auto; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .brand span { display: none; }
+    .page-head { padding: 48px 0 32px; }
+    .prose h2 { font-size: 1.3rem; }
+    footer .foot-top { flex-direction: column; text-align: center; }
+    footer .links { justify-content: center; }
+  }
+  .appstore { flex-direction: row; padding: 10px 20px; background: #000; color: #fff; border: 1px solid #3a3a3a; }
+  .appstore .lines { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .appstore small { font-size: 0.68rem; font-weight: 500; opacity: .8; }
+  .appstore strong { font-size: 1.1rem; font-weight: 600; }
+  .soon { display: inline-block; margin-left: 10px; padding: 3px 9px; font-size: 0.68rem; font-weight: 600;
+          letter-spacing: .06em; text-transform: uppercase; border-radius: 999px;
+          background: var(--ember-soft); color: var(--ember-2); vertical-align: middle; }
+  /* Hero */
+  .hero { position: relative; padding: 96px 0 88px; }
+  .hero::before { content: ""; position: absolute; inset: -120px 0 auto 0; height: 640px; z-index: -1;
+                  background: radial-gradient(ellipse 60% 55% at 72% 38%, rgba(47,123,255,0.26), transparent 70%),
+                              radial-gradient(ellipse 40% 40% at 18% 20%, rgba(255,140,43,0.12), transparent 70%); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+             background: var(--ember-soft); color: var(--ember-2); font-size: 0.8rem; font-weight: 600;
+             letter-spacing: .04em; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); line-height: 1.02; font-weight: 700; margin-bottom: 18px; }
+  .hero .tag { font-size: clamp(1.2rem, 2.2vw, 1.5rem); font-weight: 500; color: var(--text); margin-bottom: 18px; }
+  .hero p.lead { font-size: 1.08rem; color: var(--muted); max-width: 520px; margin-bottom: 34px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+  /* Phone mockup */
+  .phone { justify-self: center; width: 300px; aspect-ratio: 9 / 19; border-radius: 46px; padding: 12px;
+           background: linear-gradient(160deg, #2a3350, #0c1224); box-shadow: 0 40px 80px rgba(0,0,0,.55), 0 0 0 1px #33363f;
+           transform: rotate(3deg); }
+  .screen { width: 100%; height: 100%; border-radius: 36px; background: #0B0C10; padding: 44px 18px 18px; position: relative; overflow: hidden; }
+  .screen::before { content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+                    width: 88px; height: 24px; border-radius: 14px; background: #000; }
+  .s-date { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .s-title { font-family: "Space Grotesk"; font-size: 1.6rem; font-weight: 700; margin: 2px 0 14px; }
+  .s-due { border-radius: 16px; padding: 16px; margin-bottom: 12px;
+           background: linear-gradient(135deg, var(--ember), var(--ember-2)); color: #1A0E05; }
+  .s-due .n { font-family: "Space Grotesk"; font-size: 2.2rem; font-weight: 700; line-height: 1; }
+  .s-due .l { font-size: 0.78rem; font-weight: 600; }
+  .s-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 12px; border-radius: 12px;
+           background: var(--surface); margin-bottom: 8px; font-size: 0.78rem; }
+  .s-row b { font-weight: 600; }
+  .s-row span { color: var(--muted); font-size: 0.7rem; }
+  .bar { height: 5px; border-radius: 4px; background: var(--surface-2); margin-top: 6px; overflow: hidden; width: 110px; }
+  .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--ember), var(--ember-2)); border-radius: 4px; }
+  .pill { font-size: 0.68rem; font-weight: 600; color: var(--ember-2); background: var(--ember-soft); padding: 3px 8px; border-radius: 999px; }
+
+  /* Sections */
+  section { padding: 88px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-head .kicker { color: var(--ember); font-weight: 600; font-size: 0.82rem; letter-spacing: .12em; text-transform: uppercase; }
+  .section-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 10px 0 14px; }
+  .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+  /* Features */
+  .features { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px;
+          transition: transform .2s ease, border-color .2s ease; position: relative; overflow: hidden; }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,106,43,.45); }
+  .icon { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 20px;
+          background: var(--ember-soft); color: var(--ember); }
+  .icon svg { width: 26px; height: 26px; }
+  .card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 0.96rem; }
+  .card.wide { grid-column: span 2; }
+
+  .hier { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+  .hier span { padding: 7px 13px; border-radius: 10px; font-size: 0.84rem; font-weight: 600;
+               background: var(--surface-2); border: 1px solid var(--border); }
+  .hier span:nth-child(1) { border-color: rgba(255,106,43,.7); color: var(--ember); }
+  .hier span:nth-child(3) { border-color: rgba(255,130,50,.5); }
+  .hier span:nth-child(5) { border-color: rgba(255,155,55,.35); }
+  .hier span:nth-child(7) { background: linear-gradient(95deg, var(--ember), var(--ember-2)); color: #1A0E05; border: none; }
+  .hier em { font-style: normal; color: var(--muted); }
+
+  .flow { display: flex; align-items: center; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .flow span { font-size: 0.78rem; padding: 5px 10px; border-radius: 8px; background: var(--surface-2); color: var(--muted); }
+  .flow b { color: var(--ember); }
+
+  .curve { margin-top: 16px; width: 100%; height: 64px; }
+
+  /* Study anywhere */
+  .anywhere .panel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+                     background: linear-gradient(135deg, #16213F 0%, #0F1629 60%); border: 1px solid var(--border);
+                     border-radius: 28px; padding: 56px; position: relative; overflow: hidden; }
+  .anywhere .panel::after { content: ""; position: absolute; right: -120px; top: -120px; width: 380px; height: 380px;
+                            background: radial-gradient(circle, rgba(255,106,43,.25), transparent 65%); }
+  .anywhere h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.08; margin-bottom: 14px; }
+  .anywhere p { color: var(--muted); font-size: 1.08rem; }
+  .moments { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; position: relative; z-index: 1; }
+  .moment { background: rgba(27,30,38,.85); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+  .moment .t { font-family: "Space Grotesk"; font-size: 1.6rem; font-weight: 700; }
+  .moment .d { color: var(--muted); font-size: 0.86rem; }
+
+  /* Final CTA + footer */
+  .final { text-align: center; }
+  .final h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.05; margin-bottom: 14px; }
+  .final p { color: var(--muted); font-size: 1.08rem; margin-bottom: 32px; }
+  .hero-icon { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 22px;
+               box-shadow: 0 18px 40px rgba(47,123,255,.35), 0 0 0 1px rgba(255,255,255,.06); }
+  .s-app { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .s-app .app-icon { width: 22px; height: 22px; border-radius: 5px; box-shadow: none; }
+  .s-app span { font-size: .72rem; font-weight: 600; color: var(--muted); }
+
+  /* Study smarter */
+  .smart .head { max-width: 720px; margin-bottom: 44px; }
+  .smart .head .kicker { color: var(--blue); font-weight: 600; font-size: 0.82rem; letter-spacing: .12em; text-transform: uppercase; }
+  .smart .head h2 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; margin: 10px 0 14px; }
+  .smart .head p { color: var(--muted); font-size: 1.08rem; }
+  .smart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .smart-card { position: relative; display: grid; grid-template-columns: 52px 1fr; gap: 18px; padding: 28px;
+                border-radius: var(--radius); border: 1px solid var(--border);
+                background: linear-gradient(145deg, var(--surface) 0%, var(--bg-2) 100%);
+                transition: transform .2s ease, border-color .2s ease; }
+  .smart-card:hover { transform: translateY(-3px); border-color: rgba(47,123,255,.55); }
+  .smart-card .ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+                    background: var(--blue-soft); color: #7FB0FF; }
+  .smart-card .ic svg { width: 26px; height: 26px; }
+  .smart-card .n { position: absolute; top: 20px; right: 22px; font-family: "Space Grotesk", sans-serif; font-weight: 700;
+                   font-size: .82rem; color: var(--muted); opacity: .6; }
+  .smart-card h3 { font-size: 1.2rem; margin: 2px 0 8px; padding-right: 28px; }
+  .smart-card p { color: var(--muted); font-size: .96rem; }
+  .smart-card .path { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 14px;
+                      font-size: .82rem; font-weight: 600; color: var(--ember-2); }
+  .smart-card .path b { color: var(--muted); font-weight: 400; }
+
+  @media (max-width: 900px) {
+    .hero { padding: 64px 0; }
+    .hero .wrap { grid-template-columns: 1fr; text-align: center; }
+    .hero-icon { margin-left: auto; margin-right: auto; }
+    .hero p.lead { margin-left: auto; margin-right: auto; }
+    .cta-row { justify-content: center; }
+    .phone { transform: none; width: 270px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .card.wide { grid-column: span 2; }
+    .smart-grid { grid-template-columns: 1fr; }
+    .anywhere .panel { grid-template-columns: 1fr; padding: 36px 24px; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 64px 0; }
+    .grid { grid-template-columns: 1fr; }
+    .card.wide { grid-column: span 1; }
+    .smart-card { grid-template-columns: 1fr; padding: 24px; }
+  }
 </style>
 </head>
 <body>
-<div class="container">
-<nav>
-  <div class="brand">RecallForge</div>
-  <div class="navlinks">
-    <a href="/recallforge/support/">Support</a>
-    <a href="/recallforge/privacy/">Privacy</a>
-    <a href="/recallforge/terms/">Terms</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF6A2B"/><stop offset="1" stop-color="#FFB23F"/>
+    </linearGradient>
+  </defs>
+</svg>
+<nav class="top">
+  <div class="wrap">
+    <a href="https://rightvectorconsulting.com/recallforge/marketing/" class="brand" aria-label="RecallForge home"><i class="app-icon" aria-hidden="true"></i><span>RecallForge</span></a>
+    <div class="nav-links">
+      <a href="#features" class="wide-only">Features</a>
+      <a href="https://rightvectorconsulting.com/recallforge/support/">Support</a>
+      <a href="https://rightvectorconsulting.com/recallforge/privacy/">Privacy</a>
+      <a href="https://rightvectorconsulting.com/recallforge/terms/">Terms</a>
+    </div>
   </div>
 </nav>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <i class="app-icon hero-icon" role="img" aria-label="RecallForge app icon"></i>
+      <div class="eyebrow">★ Spaced repetition for certification exams</div>
+      <h1>Forge a<br><span class="grad">Better You.</span></h1>
+      <p class="tag">Master your certification. One card at a time.</p>
+      <p class="lead">RecallForge is a spaced-repetition study app designed specifically for professionals preparing for certification exams.</p>
+      <div class="cta-row">
+        <a class="btn appstore" href="#" aria-label="Download on the App Store (coming soon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span class="lines"><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <span class="soon">Coming soon</span>
+      </div>
+    </div>
 
-<header class="hero">
-  <div class="eyebrow">Built for Certification Study</div>
-  <h1>RecallForge</h1>
-  <div class="tagline">Forge a Better You.</div>
-  <p class="subtitle">Master your certification. One card at a time.</p>
-  <p class="lead">RecallForge is a spaced-repetition study app designed specifically for professionals preparing for certification exams. Turn your own study material into focused flashcards, review what matters today, and build knowledge that lasts.</p>
-  <div class="actions">
-    <a class="btn primary" href="#features">Explore Features</a>
-    <a class="btn" href="/recallforge/support/">Get Support</a>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="s-app"><i class="app-icon"></i><span>RecallForge</span></div>
+        <div class="s-date">Thursday</div>
+        <div class="s-title">Today</div>
+        <div class="s-due">
+          <div class="n">42</div>
+          <div class="l">cards due · about 12 min</div>
+        </div>
+        <div class="s-row">
+          <div><b>Cloud Architect</b><div class="bar"><i style="width:78%"></i></div></div>
+          <span class="pill">78%</span>
+        </div>
+        <div class="s-row">
+          <div><b>Security Domain</b><div class="bar"><i style="width:61%"></i></div></div>
+          <span class="pill">61%</span>
+        </div>
+        <div class="s-row">
+          <div><b>Networking</b><div class="bar"><i style="width:44%"></i></div></div>
+          <span class="pill">44%</span>
+        </div>
+        <div class="s-row">
+          <div><b>New cards</b><br><span>From your PDF import</span></div>
+          <span class="pill">+15</span>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
-<main>
-<section id="features">
-  <div class="sectionhead">
-    <h2>Study smarter. Remember longer.</h2>
-    <p>Built around the structure of certification exams and designed to help you focus your study time where it matters most.</p>
-  </div>
-  <div class="grid">
-    <article class="card"><div class="icon">✦</div><h3>AI-Powered Card Creation</h3><p>Turn notes, webpages, PDFs, and other study material into ready-to-review flashcards. Review and refine generated cards before adding them to your study plan.</p></article>
-    <article class="card"><div class="icon">▦</div><h3>Built for Certifications</h3><p>Organize your study material around the structure of the certification you are pursuing—not around a generic pile of cards.</p><div class="path">Certification → Domain → Topic → Flashcards</div></article>
-    <article class="card"><div class="icon">↻</div><h3>FSRS-5 Spaced Repetition</h3><p>Study the right cards at the right time. RecallForge schedules reviews based on your responses so you spend less time repeating what you already know.</p></article>
-    <article class="card"><div class="icon">⌑</div><h3>Photo to Flashcards</h3><p>Capture text from textbooks, whiteboards, or printed material with your device camera and transform the extracted content into study cards.</p></article>
-    <article class="card"><div class="icon">✓</div><h3>Today View</h3><p>Open RecallForge and immediately know what to study. Your daily review queue brings due cards together for a focused session.</p></article>
-    <article class="card"><div class="icon">◒</div><h3>Track Your Readiness</h3><p>See progress across certifications, domains, and decks. Monitor review activity and readiness indicators as you prepare for exam day.</p></article>
-  </div>
-</section>
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Capabilities</div>
+      <h2>Everything you need to pass. <span class="grad">Nothing you don't.</span></h2>
+      <p>Built around the way certification exams are structured, and the way busy professionals actually study.</p>
+    </div>
 
-<section class="study">
-  <h2>Study Anywhere</h2>
-  <p>Built for working professionals. Turn a few minutes between meetings, during a break, or at the end of the day into a focused study session.</p>
-  <!-- Replace this element with an App Store link when RecallForge is available. -->
-  <div class="store">Coming to the App Store</div>
-</section>
-</main>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
+        <h3>AI-Powered Card Creation</h3>
+        <p>Turn notes, webpages, PDFs, and other study material into flashcards.</p>
+        <div class="flow"><span>Notes</span><span>Web</span><span>PDF</span><b>→</b><span style="color:var(--ember-2)">Cards</span></div>
+      </div>
 
-<footer>
-  <div class="foot">
-    <strong>RecallForge · RightVector Consulting</strong>
-    <div class="links">
-      <a href="/recallforge/privacy/">Privacy Policy</a>
-      <a href="/recallforge/support/">Support</a>
-      <a href="/recallforge/terms/">Terms of Use</a>
+      <div class="card wide">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div>
+        <h3>Built for Certifications</h3>
+        <p>Organize material exactly like your exam.</p>
+        <div class="hier">
+          <span>Certification</span><em>→</em>
+          <span>Domain</span><em>→</em>
+          <span>Topic</span><em>→</em>
+          <span>Flashcards</span>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>FSRS-5 Spaced Repetition</h3>
+        <p>Study the right cards at the right time instead of repeatedly reviewing material you already know.</p>
+        <svg class="curve" viewBox="0 0 600 64" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 6 C40 40 60 52 90 56 L90 8 C150 36 180 46 220 50 L220 10 C300 30 340 38 390 42 L390 12 C470 24 530 30 600 32" fill="none" stroke="url(#emberGrad)" stroke-width="3" stroke-linecap="round"/>
+          <g fill="#FFB23F"><circle cx="90" cy="8" r="5"/><circle cx="220" cy="10" r="5"/><circle cx="390" cy="12" r="5"/></g>
+        </svg>
+      </div>
+
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+        <h3>Photo to Flashcards</h3>
+        <p>Photograph textbook pages, whiteboards, or printed material and convert the text into study cards.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></div>
+        <h3>Today View</h3>
+        <p>Open RecallForge and immediately see what you need to study today.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Track Your Readiness</h3>
+        <p>See progress by certification, domain, and deck.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3>Designed for iPhone</h3>
+        <p>A focused, native experience that's ready whenever you have a few minutes.</p>
+      </div>
     </div>
   </div>
-  <div class="legal">
-    <p>© 2026 RightVector Consulting. All rights reserved. RecallForge: Cert Study, its original branding, software, design, and original content are protected to the extent provided by applicable law.</p>
-    <p>Certification names, examination names, company names, product names, logos, trademarks, and service marks referenced in RecallForge are the property of their respective owners. Unless expressly stated otherwise, RecallForge and RightVector Consulting are not affiliated with, sponsored by, endorsed by, or approved by any certification provider, examination organization, technology company, or other third party referenced in the App.</p>
+</section>
+
+<!-- STUDY SMARTER -->
+<section class="smart" id="study-smarter">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">Why RecallForge</div>
+      <h2>Study smarter. <span class="grad">Remember longer.</span></h2>
+      <p>Built around the structure of certification exams and designed to help you focus your study time where it matters most.</p>
+    </div>
+    <div class="smart-grid"><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><div><span class="n">01</span><h3>AI-Powered Card Creation</h3><p>Turn notes, webpages, PDFs, and other study material into ready-to-review flashcards. Review and refine generated cards before adding them to your study plan.</p></div></article><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div><div><span class="n">02</span><h3>Built for Certifications</h3><p>Organize your study material around the structure of the certification you are pursuing—not around a generic pile of cards.</p><div class="path">Certification <b>→</b> Domain <b>→</b> Topic <b>→</b> Flashcards</div></div></article><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg></div><div><span class="n">03</span><h3>FSRS-5 Spaced Repetition</h3><p>Study the right cards at the right time. RecallForge schedules reviews based on your responses so you spend less time repeating what you already know.</p></div></article><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><div><span class="n">04</span><h3>Photo to Flashcards</h3><p>Capture text from textbooks, whiteboards, or printed material with your device camera and transform the extracted content into study cards.</p></div></article><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></div><div><span class="n">05</span><h3>Today View</h3><p>Open RecallForge and immediately know what to study. Your daily review queue brings due cards together for a focused session.</p></div></article><article class="smart-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><span class="n">06</span><h3>Track Your Readiness</h3><p>See progress across certifications, domains, and decks. Monitor review activity and readiness indicators as you prepare for exam day.</p></div></article></div>
+  </div>
+</section>
+
+<!-- STUDY ANYWHERE -->
+<section class="anywhere" id="anywhere">
+  <div class="wrap">
+    <div class="panel">
+      <div style="position:relative;z-index:1">
+        <div class="section-head" style="text-align:left;margin:0 0 8px"><div class="kicker">Study Anywhere</div></div>
+        <h2>Progress fits into <span class="grad">the gaps in your day.</span></h2>
+        <p>Short study sessions designed for working professionals.</p>
+      </div>
+      <div class="moments">
+        <div class="moment"><div class="t">5 min</div><div class="d">Morning coffee</div></div>
+        <div class="moment"><div class="t">10 min</div><div class="d">The commute</div></div>
+        <div class="moment"><div class="t">3 min</div><div class="d">Between meetings</div></div>
+        <div class="moment"><div class="t">8 min</div><div class="d">Before bed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Your next certification<br><span class="grad">starts with one card.</span></h2>
+    <p>Forge a better you with RecallForge.</p>
+    <div class="cta-row">
+      <a class="btn appstore" href="#" aria-label="Download on the App Store (coming soon)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span class="lines"><small>Download on the</small><strong>App Store</strong></span>
+      </a>
+      <span class="soon">Coming soon</span>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot-top">
+    <a href="https://rightvectorconsulting.com/recallforge/marketing/" class="brand"><i class="app-icon" aria-hidden="true"></i>RecallForge</a>
+    <div class="links">
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/privacy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Privacy Policy</a>
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/terms/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Terms of Use</a>
+      <a class="btn btn-ghost" href="https://rightvectorconsulting.com/recallforge/support/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5h.01"/></svg>Support</a>
+    </div>
+  </div>
+  <div class="wrap site-legal" id="legal-notice">
+    <h4>Legal &amp; Intellectual Property Notice</h4>
+    <p>RecallForge: Cert Study, including its original software, user interface, design, branding, text, and original visual elements, is owned by RightVector Consulting or its licensors and is protected by applicable copyright, trademark, and other intellectual property laws.</p><p>Certain icons, graphics, fonts, images, symbols, software components, libraries, frameworks, or other materials used in or in connection with RecallForge may be owned by third parties and are used pursuant to applicable licenses, permissions, platform terms, or other lawful bases. Ownership of such third-party materials remains with their respective owners. Nothing in RecallForge or this website is intended to claim ownership of third-party intellectual property.</p><p>Product names, certification names, examination names, company names, logos, trademarks, service marks, and other identifiers referenced by RecallForge are the property of their respective owners. References to third-party certifications, products, or organizations are provided solely for identification, informational, and study-organization purposes.</p><p>RecallForge and RightVector Consulting are not affiliated with, sponsored by, endorsed by, or approved by any certification provider, examination organization, technology company, standards organization, or other third party merely because its name, certification, product, or trademark is referenced in the App.</p><p>Users are responsible for ensuring that materials they import, photograph, scan, copy, share, upload, or submit for AI processing through RecallForge may lawfully be used for those purposes. RecallForge does not grant users permission to reproduce, distribute, process, or create derivative works from copyrighted, confidential, proprietary, restricted, or otherwise protected third-party materials.</p><p>If you are an intellectual property owner or authorized representative and believe that material associated with RecallForge infringes your rights, please contact <a href="mailto:legal@rightvectorconsulting.com">legal@rightvectorconsulting.com</a> with sufficient information to identify the material and the rights claimed. Appropriate requests will be reviewed and addressed in accordance with applicable law.</p><p>© 2026 RightVector Consulting. All rights reserved. RecallForge: Cert Study and its original branding and content are protected to the extent provided by applicable law. Third-party trademarks and other intellectual property remain the property of their respective owners.</p>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <p><strong>© 2026 RightVector Consulting. All rights reserved.</strong></p>
+      <p>Certification names, company names, product names, trademarks, and service marks are the property of their respective owners. RecallForge and RightVector Consulting are not affiliated with or endorsed by third-party certification providers unless expressly stated.</p>
+    </div>
   </div>
 </footer>
-</div>
 
 </body>
 </html>
-
