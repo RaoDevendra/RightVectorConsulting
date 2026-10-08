@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Book a Conversation with RightVector</title>
+<meta name="description" content="Book a 30-minute conversation with RightVector Consulting about IT operations transformation, portfolio assessment, platform modernization, or fractional leadership.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Book a Conversation with RightVector">
+<meta property="og:description" content="Book a 30-minute conversation with RightVector Consulting about IT operations transformation, portfolio assessment, platform modernization, or fractional leadership.">
+<meta property="og:image" content="assets/rightvector-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="RightVector Consulting LLC — home"><img class="logo-plate" src="assets/rightvector-logo-transparent.png" alt="RightVector Consulting LLC" width="155" height="44"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links"><a href="services.html">Services</a><a href="os.html">The RightVector OS</a><a href="results.html">Results</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="contact.html#schedule">Book a conversation</a></div>
+  </div>
+</nav>
+<main id="main">
+
+<header class="hero page-hero"><div class="wrap">
+  <span class="kicker">Contact</span>
+  <h1>Start with <span class="grad">a conversation.</span></h1>
+  <p class="lead">Tell me what’s happening. If I can help, I’ll say how I would start. If I can’t, I’ll say that too and point you somewhere useful.</p>
+</div></header>
+
+<section style="padding-top:32px"><div class="wrap">
+  <div class="grid two" style="align-items:start">
+    <div class="card" id="schedule">
+      <span class="kicker">Option 1</span>
+      <h2 style="font-size:1.6rem">Schedule 30 minutes</h2>
+      <p>Pick a time that works. You describe the situation; I tell you plainly whether I can help.</p>
+      <p><a class="btn btn-primary" data-rv="schedule-btn" href="#schedule" hidden>Open the calendar</a></p>
+      <p class="small muted" data-rv="schedule-ph">Scheduling link: <span class="ph">[scheduling link]</span></p>
+    </div>
+    <div class="card">
+      <span class="kicker">Option 2</span>
+      <h2 style="font-size:1.6rem">Send a note</h2>
+      <form id="contact-form" data-endpoint="" novalidate="novalidate">
+        <div><label for="f-name">Name <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div><label for="f-email">Work email <span class="req" aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="f-org">Organization <span class="req" aria-hidden="true">*</span></label><input id="f-org" name="organization" type="text" autocomplete="organization" required></div>
+        <div><label for="f-role">Your role</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
+        <div><label for="f-ind">Industry</label>
+          <select id="f-ind" name="industry">
+            <option value="" selected>Select one (optional)</option>
+            <option>Healthcare</option>
+            <option>Financial services or fintech</option>
+            <option>Another regulated industry</option>
+            <option>Other</option>
+          </select></div>
+        <div><label for="f-why">What’s prompting this? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-why" name="prompt" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Unreliable or unpredictable IT operations</option>
+            <option>An independent assessment or roadmap</option>
+            <option>An application portfolio assessment</option>
+            <option>Secure SDLC or DevSecOps</option>
+            <option>AI-enabled optimization or governance</option>
+            <option>iOS app development</option>
+            <option>A core platform migration or modernization</option>
+            <option>A leadership gap</option>
+            <option>A post-acquisition integration</option>
+            <option>A vendor or contract issue</option>
+            <option>Something else</option>
+          </select></div>
+        <div><label for="f-more">Anything else I should know</label><textarea id="f-more" name="message"></textarea></div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div><button class="btn btn-primary" type="submit" style="cursor:pointer">Send</button></div>
+        <p id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap narrow">
+  <span class="kicker">What happens next</span>
+  <h2>No slides. No pitch.</h2>
+  <ol class="num-list">
+    <li>I reply within one business day to set up a 30-minute conversation.</li>
+    <li>We talk through your situation. No slides, no pitch.</li>
+    <li>If there’s a fit, I send a short written scope. If not, I tell you so.</li>
+  </ol>
+  <p class="evidence"><b>Confidentiality:</b> Everything you share stays confidential. I’m glad to sign an NDA before we discuss specifics.</p>
+  <p class="small muted">Prefer email? <span class="ph" data-rv="email">[contact email]</span></p>
+</div></section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a href="index.html" aria-label="RightVector Consulting LLC — home"><img class="logo-plate" src="assets/rightvector-logo-transparent.png" alt="RightVector Consulting LLC" width="134" height="38"></a>
+        <p style="margin-top:14px">RightVector Consulting LLC · Atlanta, Georgia<br>
+        <span class="ph" data-rv="email">[contact email]</span> · <span class="ph" data-rv="linkedin">[LinkedIn URL]</span></p>
+      </div>
+      <div class="links">
+        <a href="services.html">Services</a><a href="os.html">The RightVector OS</a><a href="results.html">Results</a>
+        <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="legal">
+      <p style="margin:0 0 4px">© 2026 RightVector Consulting LLC. All rights reserved.</p>
+      <p style="margin:0">Client names and identifying details are withheld to protect confidentiality.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
