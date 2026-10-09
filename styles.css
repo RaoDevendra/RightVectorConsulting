@@ -257,3 +257,14 @@ td.dim { color: var(--body); font-weight: 400; }
 .grid.four { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 900px) { .grid.four { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .grid.four { grid-template-columns: 1fr; } }
+
+/* Three-practice hierarchy (home pillars and services practices) */
+.pillar-tag { display: block; color: var(--teal); font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: .92rem; letter-spacing: .02em; margin-bottom: .5em; }
+.pillar h3 { font-size: 1.3rem; }
+.pillar ul.checks { margin: .6em 0 .8em; }
+.pillar ul.checks li { margin-bottom: .35em; font-size: .96rem; }
+.pillar .start { color: var(--text); font-size: .96rem; margin: .6em 0 .3em; }
+.pillar .proof { color: var(--muted); font-size: .9rem; margin: 0 0 .8em; }
+.practice { margin: 56px 0 22px; padding-top: 22px; border-top: 2px solid var(--teal); scroll-margin-top: 90px; }
+.practice h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .3em; }
+.practice .lead { margin-bottom: 0; }
